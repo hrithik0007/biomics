@@ -1099,6 +1099,9 @@ section.what {
 
     max-width: 400px;
     font-size: 1.1rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    
   }
 
 
@@ -1202,6 +1205,8 @@ section.what {
 
   .image-div {
     width: 90vw;
+    border-radius: 35px;
+    top: 7px;
     
   }
 
@@ -1356,7 +1361,7 @@ section.what {
 
   .text-highlight,
   .text-normal {
-    font-size: 2vw;
+    font-size: 1rem;
     /* Adjust font size for readability */
   }
 
@@ -1375,7 +1380,8 @@ section.what {
   .what-sec {
 
     height: 50vh;
-
+    
+    top: 50px;
   }
 
 
@@ -1408,6 +1414,7 @@ section.what {
 
     height: 20vh;
     gap: 2rem;
+    top: 50px;
   }
 
 
@@ -1422,8 +1429,8 @@ section.what {
 
   .text-highlight,
   .text-normal {
-    font-size: 2.2vw;
-    line-height: 1;
+    font-size: 1rem;
+    /* line-height: 1; */
     /* Further adjust font size for small screens */
   }
 }
