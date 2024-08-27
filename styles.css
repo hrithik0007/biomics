@@ -6,10 +6,10 @@
 }
 
 
-/* * {
+* {
   outline: 1px solid #f00 !important;
 }
- */
+
 p {
   font-family: 'Inter', sans-serif;
 }
@@ -367,7 +367,7 @@ p {
 
 .button {
   width: auto; /* Let the button adjust to the content */
-  min-width: 140px; /* Ensures the button is wide enough */
+  min-width: 10vw; /* Ensures the button is wide enough */
   height: 50px;
   margin-left: 35px;
   padding: 8px 24px; /* Reduced padding */
@@ -930,7 +930,7 @@ section.what {
   }
 
   .what-subcontainer {
-    width: 90vw; /* Make the container wider on mobile */
+    width: 70vw; /* Make the container wider on mobile */
   }
 
   .what-title, .what-subtitle {
@@ -1648,6 +1648,7 @@ div.tp-dfwv {
     background: linear-gradient(180deg, rgba(248, 225, 255, 1) 12%, rgba(119, 104, 177, 1) 63%);
     height: 200vh; /* Adjust the height to ensure space for scrolling */
     position: sticky;
+    width: 100vw;
     overflow: hidden;
     padding: 0 10%;
     display: flex;
@@ -2710,6 +2711,16 @@ section.nvdia2 {
     width: 50px;
     height: 26px;
   }
+
+
+
+  .circle {
+   
+    width: 10vh; 
+    height: 10vh;
+    
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -2718,6 +2729,14 @@ section.nvdia2 {
     right: -10px;
     width: 40px;
     height: 20px;
+  }
+
+
+  .circle {
+   
+    width: 10vh; 
+    height: 10vh;
+    
   }
 }
 
@@ -2856,6 +2875,63 @@ section.faq {
 
 
 
+
+
+@media (max-width: 768px) {
+
+
+
+  .circle {
+   
+    width: 10vw; 
+    height: 10vw;
+    
+  }
+  .circle-1 {
+    top: -20px; /* Half of circle's diameter to overlap 50% */
+    left: 30px;
+  }
+  
+  .circle-2 {
+    top: -20px;
+    left: 90px; /* Spacing for the second circle */
+  }
+  
+  .circle-3 {
+    top: -20px;
+    left: 150px; /* Spacing for the third circle */
+  }
+  
+  
+}
+
+@media (max-width: 480px) {
+ 
+
+
+  .circle {
+   
+    width: 10vw; 
+    height: 10vw;
+    
+  }
+
+  .circle-1 {
+    top: -14px; /* Half of circle's diameter to overlap 50% */
+    left: 20vw;
+  }
+  
+  .circle-2 {
+    top: -14px;
+    left: 40vw; /* Spacing for the second circle */
+  }
+  
+  .circle-3 {
+    top: -14px;
+    left: 60vw; /* Spacing for the third circle */
+  }
+  
+}
 
 
 
