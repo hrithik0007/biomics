@@ -10,7 +10,9 @@
   outline: 1px solid #f00 !important;
 }
  */
-
+p {
+  font-family: 'Inter', sans-serif;
+}
 
   svg {
     overflow: visible !important;
@@ -33,10 +35,11 @@
   }
   
   .smooth-sec-one {
-    height: 100vh;
+    height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center; 
+    background-color: #F5F5FF; 
   }
   
   
@@ -45,6 +48,7 @@
     overflow: visible;
     z-index: 2;
     position: relative;
+    background-color: #F5F5FF; 
   }
   
   .pub-grid-container {
@@ -53,6 +57,7 @@
     height: 100%;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
+    
     grid-gap: 1rem;
     transform-origin: center top;
   }
@@ -81,6 +86,20 @@
     height: 100%;
   }
   
+
+  .gridview2 {
+    /* Offset the middle column */
+    margin-top: calc(45vh / 2); /* Adjust this value based on your card height */
+  }
+  
+  .gridview,
+  .gridview3 {
+    /* Offset side columns */
+    margin-top: calc(45vh); /* Adjust this value based on your card height */
+  }
+
+
+  
   .panel {
     height: 100vh;
     display: flex;
@@ -96,7 +115,8 @@
   }
   
   .gridcard {
-    width: 100%;  
+    width: 100%; 
+    max-height: 30vh; 
   }
   
   .gridcard img {
@@ -419,6 +439,8 @@
   word-wrap: break-word;
 }
 
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .input-field {
@@ -568,7 +590,7 @@ body {
 .header {
   display: flex;
   flex-direction: column;
-  place-items: start;
+  place-items: center;
   min-height: 100vh;
   font-family: 'Enriqueta', serif;
   
@@ -756,13 +778,472 @@ section.whyus {
 }
 
 section.what {
-  height:120vh;
-  background-color: #F5F5FF; 
+  height:200vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  place-items: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.what-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2vw; /* Space between the elements */
+  padding: 5vh 5vw; /* Padding for positioning using vh and vw */
+}
+
+.what-subcontainer {
+  flex: 1 1 45%; /* Allows it to grow/shrink and take 45% width */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh; /* Spacing between text elements */
+}
+
+.what-title {
+  width: 100%;
+  color: #bcc4dc;
+  font-size: 4vw; /* Responsive font size using vw */
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 1.25; /* Using relative line-height */
+  word-wrap: break-word;
+}
+
+.what-subtitle {
+  width: 100%;
+  color: white;
+  font-size: 3vw; /* Responsive font size using vw */
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  line-height: 1.3; /* Using relative line-height */
+  word-wrap: break-word;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .what-container {
+    padding: 5vh 5 5 5vw;
+    flex-direction: column;  /* Adjust padding for smaller screens */
+  }
+
+  .what-title, .what-subtitle {
+    font-size: 3.5vw; /* Adjust font sizes for readability */
+  }
+
+  
+
+
+.what-description {
+
+  max-width:400px;
+  font-size: 1.1rem;
+}
+
+
+}
+
+@media (max-width: 480px) {
+  .what-container {
+    padding: 5vh 5 5 5vw; /* Further adjust padding for mobile screens */
+  }
+
+  .what-subcontainer {
+    width: 90vw; /* Make the container wider on mobile */
+  }
+
+  .what-title, .what-subtitle {
+    font-size: 4vh; /* Adjust font sizes using vh */
+    line-height: 1.2; /* Adjust line-height for smaller text */
+  }
+
+  
+
+
+.what-description {
+
+  max-width:300px;
+  font-size: 1rem;
+}
+
+
+}
+
+
+
+
+
+
+
+.what-description {
+
+  max-width:500px;
+  font-size: 1.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.what-card-title {
+
+  font-size: 3vw;
+  font-family: 'Abhaya Libre ExtraBold', sans-serif;
+ 
+}
+
+
+@media (min-width: 768px) {
+
+  .what-card-title {
+  top: 50px;
+}
+
+
+
+}
+
+
+
+
+
+.what-sec
+{
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  gap: 2rem;
+}
+
+
+
+
+
+/* Base styles */
+.what-card {
+  min-width: 40vw;
+  max-width: 70vw; /* Responsive width using vw */
+  min-height: 20vh; /* Responsive height using vh */
+  height: 30vh;
+  position: relative;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 2rem; /* Use rem for scalable border radius */
+  border: 0.1rem solid rgba(255, 255, 255, 0.20); /* Use rem for scalable border */
+  backdrop-filter: blur(2.39rem); /* Use rem for consistent blur effect */
+  padding: 2vh 2vw; /* Padding for inner content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 1 45%; 
+}
+
+.what-card-icon {
+  width: 5vw; /* Responsive width */
+  height: 5vw; /* Responsive height */
+  padding: 2vh 2vw; /* Responsive padding */
+  position: absolute;
+  top: -2vh; /* Adjusted for responsive position */
+  left: 2vw; /* Adjusted for responsive position */
+  background: #7768b0;
+  border-radius: 1.25rem; /* Responsive border radius */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container, .icon-wrapper, .icon-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.icon-background {
+  width: 2vw; /* Responsive width */
+  height: 3vh; /* Responsive height */
+  background: #faeded;
+}
+
+.what-card-text {
+  width: 95%; /* Flexible width for the text container */
+  position: absolute;
+  /* Adjust position using vw for responsiveness */
+}
+
+.text-highlight {
+  color: #7768b0;
+  font-size: 1.2vw; /* Responsive font size using vw */
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  line-height: 1.6; /* Relative line-height */
+  letter-spacing: 0.2px; /* Use consistent letter spacing */
+  word-wrap: break-word;
+  top: 2vh;
+}
+
+.text-normal {
+  color: #e8e8e8;
+  font-size: 1.2vw; /* Responsive font size using vw */
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  line-height: 1.6; /* Relative line-height */
+  letter-spacing: 0.2px; /* Use consistent letter spacing */
+  word-wrap: break-word;
+  top: 2vh;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .what-card {
+    width: 80vw; /* Adjust width for smaller screens */
+    height: 30vh; /* Adjust height for smaller screens */
+  }
+
+  .what-card-icon {
+    width: 8vw; /* Adjust icon size for smaller screens */
+    height: 8vw;
+    top: -4vh;
+    left: 4vw;
+  }
+
+  .icon-background {
+    width: 3vw; /* Adjust icon background size */
+    height: 4vh;
+  }
+
+  .what-card-text {
+   
+  }
+
+  .text-highlight, .text-normal {
+    font-size: 2vw; /* Adjust font size for readability */
+  }
+
+
+
+
+  .what-description {
+
+    max-width:80vw;
+    font-size: clamp(1.0rem, 1rem, 2rem);
+  }
+  
+  
+  
+
+.what-sec
+{
+  
+  height: 50vh;
+  
+}
+
+
+
+  
+}
+
+@media (max-width: 480px) {
+  .what-card {
+    width: 90vw; /* Further adjust width for mobile screens */
+    height: 20vh; /* Allow flexible height */
+    padding: 4vh 4vw; /* Adjust padding */
+  }
+
+  .what-card-icon {
+    width: 10vw; /* Further adjust icon size */
+    height: 10vw;
+    top: -5vh;
+    left: 5vw;
+  }
+
+
+  
+
+.what-sec
+{
+ 
+  height: 20vh;
+  gap: 2rem;
+}
+
+
+
+  .icon-background {
+    width: 4vw; /* Adjust icon background size for mobile */
+    height: 5vh;
+  }
+
+  .what-card-text {
+    
+  }
+
+  .text-highlight, .text-normal {
+    font-size: 2.2vw;
+    line-height: 1; /* Further adjust font size for small screens */
+  }
+}
+
+
+
+
+
+
+
+
 
 p {
   margin: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .squisher {
   display: inline-block;
@@ -1210,7 +1691,7 @@ div.tp-dfwv {
 
   .ball {
     fill: white;
-     /* visibility: hidden;  */
+     visibility: hidden; 
   }
   
   .ball01 {
@@ -1283,7 +1764,7 @@ div.tp-dfwv {
   .card {
     width: 100%;
     min-width: 400px;
-    max-width: 700px;
+    max-width: 900px;
     min-height: 200px;
     max-height: 500px;;
     background-color: rgba(255, 255, 255, 0.010);
@@ -1337,7 +1818,7 @@ div.tp-dfwv {
  
   color: #323232;
   text-align: left;
-  max-width: 30vw;
+  max-width: 20vw;
   margin-top: 20px;
  
   font-size: 1rem;; /* Responsive font size */
@@ -1778,7 +2259,7 @@ section.nvdia2 {
   width:100%;
   height:100vh;
 
-  background-color: #7768B1;
+  background-color: #F5F5FF;;
   z-index: 10;
   display: flex;
   flex-direction: column; /* Aligns elements vertically inside the card */

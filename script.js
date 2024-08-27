@@ -141,7 +141,9 @@ gsap.defaults({ease: "none"});
     .from(".text01", { autoAlpha: 0, duration: 1, ease: "none" }, 0)
     .to(".ball02, .text01", { autoAlpha: 1, duration: 0.5 }, 0.93)
     .to(".ball03, .text02", { autoAlpha: 1, duration: 0.5 }, 1.93)
-    .to(".ball04, .text03", { autoAlpha: 1, duration: 0.5 }, 3.01);
+    .to(".ball04, .text03", { autoAlpha: 1, duration: 0.5 }, 3.01)
+  
+    ;
 
     const svgPath = document.querySelector(".theLine");
     const pathLength = svgPath.getTotalLength();
@@ -172,6 +174,103 @@ gsap.defaults({ease: "none"});
       }
     }, 0)
     .add(pulses, 0);
+
+
+
+
+//     const main2 = gsap.timeline({
+//       scrollTrigger: {
+//         trigger: ".wcard",
+//         scrub: true,
+//         start: "top center",
+//         end: "bottom center",
+//         markers: true,
+        
+      
+//       }
+//     });
+// main2.fromTo(".wcard-subtitle", 
+//   { 
+//     opacity: 0, 
+//   y: -200,
+// }  , 
+//   {
+//     opacity: 1,
+//     y:0
+//   });
+
+
+
+
+
+
+
+
+// Create a GSAP timeline with ScrollTrigger
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".what .image-div", // The section that triggers the animation
+    start: "top, 10%", // When the top of the section hits 40% of the viewport
+    end: "bottom 30%", // When the bottom of the section hits the top of the viewport
+    scrub: true, // Sync animation with scroll
+   // markers: true, // Show markers for debugging
+  },
+});
+
+// Add animations to the timeline
+tl.fromTo(
+  ".what .image-div", // Target the image-div
+  {
+    y: -800, // Starts from above the viewport
+    z: 0, // No tilt initially
+  },
+  {
+    y: -50, // End at the normal position
+    duration: 1.5, // Duration of the animation
+    ease: "power1.out", // Easing function
+  }
+)
+  .fromTo(
+    ".what .whatcard", // Target another element
+    {
+      opacity: 0, // Start with hidden opacity
+      y: -200, // Start from the left
+    },
+    {
+      opacity: 1, // Fade in
+      y: 0, // Move to the final position
+      duration: 1.5, // Duration of the animation
+      ease: "power1.out", // Easing function
+    },
+    "<" // Sync with the start of the previous animation
+  )
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Initially position `ball01` at the start of the path
     const startPos = svgPath.getPointAtLength(0);
@@ -230,13 +329,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Grid animation
   const gridTl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".svg2-container",
+      trigger: ".pub-grid",
       scroller: "#smooth-content",
       scrub: true,
       start: "top 80%",
       end: "center 60%",
-      markers: false,
+      // markers: true,
+      onUpdate: (self) => {
+        // Manually update the progress of the animation
+        if (self.progress === 1) {
+          gridTl.progress(1);
+        }
+      }
     },
+    
     defaults: {
       ease: "power1.inOut"
     }
@@ -264,37 +370,37 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollTrigger: {
       trigger: ".smooth-sec-two",
       scroller: "#smooth-content",
-      scrub: true
+      scrub: false
     }
   });
 
-  // Horizontal scroll animation
-  const pinSection = document.querySelector(".smooth-sec-three");
-  const pinContent1 = document.querySelector(".carousel-one");
-  const pinContent2 = document.querySelector(".carousel-two");
+  // // Horizontal scroll animation
+  // const pinSection = document.querySelector(".smooth-sec-three");
+  // const pinContent1 = document.querySelector(".carousel-one");
+  // const pinContent2 = document.querySelector(".carousel-two");
 
-  const pinTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: pinSection,
-      scroller: "#smooth-content",
-      pin: true,
-      start: "top top",
-      end: () => `+=${pinContent1.offsetWidth - window.innerWidth}`,
-      scrub: true,
-      invalidateOnRefresh: true,
-      pinSpacing: false
-    }
-  });
+  // const pinTl = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: pinSection,
+  //     scroller: "#smooth-content",
+  //     pin: true,
+  //     start: "top top",
+  //     end: () => `+=${pinContent1.offsetWidth - window.innerWidth}`,
+  //     scrub: false,
+  //     invalidateOnRefresh: true,
+  //     pinSpacing: false
+  //   }
+  // });
 
-  pinTl.to(".carousel-one", {
-    x: () => -(pinContent1.offsetWidth - window.innerWidth),
-    ease: "none"
-  }, 0);
+  // pinTl.to(".carousel-one", {
+  //   x: () => -(pinContent1.offsetWidth - window.innerWidth),
+  //   ease: "none"
+  // }, 0);
 
-  pinTl.to(".carousel-two", {
-    x: () => pinContent2.offsetWidth - window.innerWidth,
-    ease: "none"
-  }, 0);
+  // pinTl.to(".carousel-two", {
+  //   x: () => pinContent2.offsetWidth - window.innerWidth,
+  //   ease: "none"
+  // }, 0);
 
   // Update ScrollTrigger when Locomotive Scroll updates
   scroll.on("scroll", ScrollTrigger.update);
