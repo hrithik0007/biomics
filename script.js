@@ -129,6 +129,44 @@ gsap.defaults({ease: "none"});
 
   
 
+
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".what", // The section that triggers the animation
+    scrub: true,
+    start: "top 10%",
+    end: "bottom top",  // Animation ends before the `.products` section starts
+    pin: true,          // Pin the `.what` section during the animation
+    pinSpacing: true,  // Avoid additional spacing after pinning
+    markers: true, 
+  },
+});
+
+
+tl.fromTo(
+    " .whatcard", // Target another element
+    {
+      opacity: 0, // Start with hidden opacity
+      y: -200, // Start from the left
+    },
+    {
+      opacity: 1, // Fade in
+      y: 0, // Move to the final position
+      duration: 1.5, // Duration of the animation
+      ease: "power1.out", // Easing function
+    },
+    "<" // Sync with the start of the previous animation
+  )
+
+
+
+
+
+
+
+
+
     // GSAP Timeline for Pulses
     const pulses = gsap.timeline({
       defaults: {
@@ -157,9 +195,10 @@ gsap.defaults({ease: "none"});
         trigger: ".products",
         scrub: true,
         start: "top top",
-        end: () => "+=" + window.innerHeight * 2,
+        end: () => "+=" + window.innerHeight * 0.7,
         markers: false,
         pin: true,
+        pinSpacing: false,
       }
     })
     .to(svgPath, { strokeDashoffset: 0, duration: 4 }, 0) // Draw the path
@@ -174,82 +213,6 @@ gsap.defaults({ease: "none"});
       }
     }, 0)
     .add(pulses, 0);
-
-
-
-
-//     const main2 = gsap.timeline({
-//       scrollTrigger: {
-//         trigger: ".wcard",
-//         scrub: true,
-//         start: "top center",
-//         end: "bottom center",
-//         markers: true,
-        
-      
-//       }
-//     });
-// main2.fromTo(".wcard-subtitle", 
-//   { 
-//     opacity: 0, 
-//   y: -200,
-// }  , 
-//   {
-//     opacity: 1,
-//     y:0
-//   });
-
-
-
-
-
-
-
-
-// Create a GSAP timeline with ScrollTrigger
-const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".what .image-div", // The section that triggers the animation
-    start: "top, 10%", // When the top of the section hits 40% of the viewport
-    end: "bottom 30%", // When the bottom of the section hits the top of the viewport
-    scrub: true, // Sync animation with scroll
-   // markers: true, // Show markers for debugging
-  },
-});
-
-// Add animations to the timeline
-tl.fromTo(
-  ".what .image-div", // Target the image-div
-  {
-    y: -800, // Starts from above the viewport
-    z: 0, // No tilt initially
-  },
-  {
-    y: -50, // End at the normal position
-    duration: 1.5, // Duration of the animation
-    ease: "power1.out", // Easing function
-  }
-)
-  .fromTo(
-    ".what .whatcard", // Target another element
-    {
-      opacity: 0, // Start with hidden opacity
-      y: -200, // Start from the left
-    },
-    {
-      opacity: 1, // Fade in
-      y: 0, // Move to the final position
-      duration: 1.5, // Duration of the animation
-      ease: "power1.out", // Easing function
-    },
-    "<" // Sync with the start of the previous animation
-  )
-  
-
-
-  
-
-
 
 
 

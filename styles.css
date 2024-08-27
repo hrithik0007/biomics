@@ -778,8 +778,8 @@ section.whyus {
 }
 
 section.what {
-  height:200vh;
-  
+  height:100vh;
+  position: sticky;
   display: flex;
   flex-direction: column;
   justify-content: end;
