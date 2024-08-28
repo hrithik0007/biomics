@@ -170,16 +170,24 @@ tl.fromTo(
     // GSAP Timeline for Pulses
     const pulses = gsap.timeline({
       defaults: {
-        scale: 2,
+        //  scale: 2,
         autoAlpha: 1,
         transformOrigin: 'center',
         ease: "elastic(2.5, 1)",
       }
     })
-    .from(".text01", { autoAlpha: 0, duration: 1, ease: "none" }, 0)
-    .to(".ball02, .text01", { autoAlpha: 1, duration: 0.5 }, 0.93)
-    .to(".ball03, .text02", { autoAlpha: 1, duration: 0.5 }, 1.93)
-    .to(".ball04, .text03", { autoAlpha: 1, duration: 0.5 }, 3.01)
+    .from(".text01", { autoAlpha: 1, duration: 1, ease: "none" }, 0) // Initial fade-in of text01
+  .to(".ball02", { autoAlpha: 1, duration: 0.5 ,scale: 2}, 0.93) // ball02 and text01 appear
+
+  // Text01 fades out as pro fades in when ball03 appears
+  .to(".ball03", { autoAlpha: 1, duration: 0.5, scale: 2 }, 1.93) // ball03 appears
+  .fromTo(".text01", { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.5 }, 1.93) // text01 fades out
+  .fromTo(".pro", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, 1.93) // pro fades in
+
+  // pro fades out as proo fades in when ball04 appears
+  .to(".ball04", { autoAlpha: 1, duration: 0.5 , scale: 2}, 3.01) // ball04 appears
+  .fromTo(".pro", { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.5 }, 3.01) // pro fades out
+  .fromTo(".proo", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, 3.01); // proo fades in
   
     ;
 
@@ -198,7 +206,7 @@ tl.fromTo(
         end: () => "+=" + window.innerHeight * 0.7,
         markers: false,
         pin: true,
-        pinSpacing: false,
+        pinSpacing: true,
       }
     })
     .to(svgPath, { strokeDashoffset: 0, duration: 4 }, 0) // Draw the path
@@ -321,3 +329,41 @@ tl.fromTo(
 
 
 
+
+    gsap.fromTo(".wcard-subtitle", 
+      { opacity: 1 ,scale: 1, rotate: 0, y: 0}, // Start with full visibility
+  {
+    opacity: 0, // Fade out to 0 opacity
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".wcard",
+      start: "center center",
+      scrub: true, // Enables smooth transition based on scroll position
+      onEnter: () => {
+        // Change the subtitle content when the animation triggers
+        document.querySelector('.wcard-subtitle').textContent = "Discover our revolutionary through advanced algorithmsprediction Personalized  system by DigiBiomics. Enhances treatment outcomes  system.";
+      },
+      onLeaveBack: () => {
+        // Revert to original subtitle when scrolling back up
+        document.querySelector('.wcard-subtitle').textContent = "Personalized antidepressant therapy prediction system by DigiBiomics. Enhances treatment outcomes through advanced algorithms.";
+      }
+    }
+  }
+);
+
+gsap.fromTo(".contactus-card", 
+  { opacity: 0 ,scale: 0.1, rotate: 0, y: 50}, // Start with full visibility
+{
+opacity: 1, // Fade out to 0 opacity
+duration: 1,
+scale: 1,
+scrollTrigger: {
+  trigger: ".contactus-card",
+  start: "top bottom",
+  end: "center 75%",
+  scrub: true, // Enables smooth transition based on scroll position
+ // markers: true,
+  
+}
+}
+);

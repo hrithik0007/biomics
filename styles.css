@@ -5,10 +5,27 @@
 
 }
 
-
-/* * {
+/* 
+* {
   outline: 1px solid #f00 !important;
 } */
+
+
+
+
+.text01 , .pro , .proo {
+
+  /* visibility: hidden; */
+  position: absolute; /* Stack elements on top of each other */
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+ 
+ 
+}
+       
+
 
 p {
   font-family: 'Inter', sans-serif;
@@ -76,7 +93,7 @@ svg {
 
 .svg2-container svg {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -233,7 +250,7 @@ svg {
   height: 60px;
 
 
-
+margin-left: 10px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -362,6 +379,7 @@ svg {
 
 .menu {
   display : none;
+  
 }
 
 
@@ -417,7 +435,7 @@ svg {
   .menu h4 {
     float: right;
     color: #3f3232;
-    margin: 0;
+    margin-right: 10px;
     padding: 0;
     line-height: 50px;
     cursor: pointer;
@@ -491,6 +509,13 @@ svg {
     line-height: 80px;
 
   }
+
+
+  .svg2-container {
+   
+    height: 30vh;
+   
+  }
 }
 
 @media (max-width: 480px) {
@@ -499,7 +524,11 @@ svg {
     line-height: 10px;
   }
 
-
+  .svg2-container {
+   
+    height: 20vh;
+   
+  }
 
 
 
@@ -943,6 +972,8 @@ section.whyus {
   top: 0;
   display: grid;
   place-items: center;
+
+  padding: 10vw;
 }
 
 section.what {
@@ -1021,6 +1052,14 @@ section.what {
 
 
 
+.what-description {
+
+  max-width: 80vw;
+  font-size: clamp(1.0rem, 1rem, 2rem);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
 
 
 
@@ -1057,7 +1096,7 @@ section.what {
 .what-title {
   width: 100%;
   color: #bcc4dc;
-  font-size: 4vw;
+  font-size: 2.7vw;
   /* Responsive font size using vw */
   font-family: 'Inter', sans-serif;
   font-weight: 500;
@@ -1101,6 +1140,7 @@ section.what {
     font-size: 1.1rem;
     color: white;
     font-family: 'Inter', sans-serif;
+    line-height: 1.2;
     
   }
 
@@ -1197,10 +1237,10 @@ section.what {
 }
 
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 
   .what-card-title {
-    top: 50px;
+    top: 20px;
   }
 
   .image-div {
@@ -1211,7 +1251,7 @@ section.what {
   }
 
   .what-div {
-    width: 95vw;
+    width: 100vw;
     
   }
   
@@ -1307,11 +1347,11 @@ section.what {
 }
 
 .text-highlight {
-  color: #7768b0;
+  color: #a99ae9;
   font-size: 1.2vw;
   /* Responsive font size using vw */
   font-family: 'Inter', sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.6;
   /* Relative line-height */
   letter-spacing: 0.2px;
@@ -1325,7 +1365,7 @@ section.what {
   font-size: 1.2vw;
   /* Responsive font size using vw */
   font-family: 'Inter', sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.6;
   /* Relative line-height */
   letter-spacing: 0.2px;
@@ -1347,8 +1387,8 @@ section.what {
     width: 8vw;
     /* Adjust icon size for smaller screens */
     height: 8vw;
-    top: -4vh;
-    left: 4vw;
+    top: -4vw;
+    left: 3vw;
   }
 
   .icon-background {
@@ -1367,12 +1407,6 @@ section.what {
 
 
 
-
-  .what-description {
-
-    max-width: 80vw;
-    font-size: clamp(1.0rem, 1rem, 2rem);
-  }
 
 
 
@@ -1403,7 +1437,7 @@ section.what {
     width: 10vw;
     /* Further adjust icon size */
     height: 10vw;
-    top: -5vh;
+    top: -2vh;
     left: 5vw;
   }
 
@@ -1843,7 +1877,7 @@ div.tp-dfwv {
 /* General Styles */
 .products {
   background: linear-gradient(180deg, rgba(248, 225, 255, 1) 12%, rgba(119, 104, 177, 1) 63%);
-  height: 200vh;
+  height: 100vh;
   /* Adjust the height to ensure space for scrolling */
   position: sticky;
   width: 100vw;
@@ -1859,8 +1893,9 @@ div.tp-dfwv {
   color: #BCC4DC;
   text-align: center;
   font-family: 'Inter', sans-serif;
-  font-size: 1.5ch;
+  font-size: 4vw;
   margin: 10px auto;
+  margin-top: 4vh;
 }
 
 .content-wrapper {
@@ -1931,6 +1966,7 @@ div.tp-dfwv {
   .svg-container {
     margin-left: 0;
     width: 100%;
+    margin-top: -100px;
   }
 
   #svg {
@@ -1944,6 +1980,9 @@ div.tp-dfwv {
     margin-top: -50%;
 
   }
+
+
+  
 }
 
 
@@ -1964,7 +2003,7 @@ div.tp-dfwv {
   align-items: center;
   /* Space between cards */
 
-
+  
   padding-left: 20px;
   justify-content: center;
 }
@@ -1973,25 +2012,27 @@ div.tp-dfwv {
   width: 100%;
   min-width: 400px;
   max-width: 900px;
-  min-height: 200px;
-  max-height: 500px;
-  ;
+  min-height: 500px;
+  max-height: 700px;
+  
   background-color: rgba(255, 255, 255, 0.010);
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   position: relative;
   z-index: 1;
-  overflow: hidden;
+  overflow: visible;
+  
 }
 
 .card-image {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 300px;
+ max-width: 20vw;;
   object-fit: cover;
   z-index: 1;
+  max-height: 40vh;
 }
 
 
@@ -2002,6 +2043,26 @@ div.tp-dfwv {
 
 
 
+
+.cardsvg1 {
+
+
+  position: absolute;
+  right: 20px;
+  top: -50px;
+  z-index: 2;
+}
+
+
+
+.cardsvg2 {
+
+
+  position: absolute;
+  right: -50px;
+  top: 50px;
+  z-index: 2;
+}
 
 
 
@@ -2030,12 +2091,12 @@ div.tp-dfwv {
   max-width: 20vw;
   margin-top: 20px;
 
-  font-size: 1rem;
+  font-size: 1.3rem;
   ;
   /* Responsive font size */
   font-family: 'JetBrains Mono', monospace;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.7;
   /* Adjusted for better readability */
   /* Added padding to ensure better spacing */
   word-wrap: break-word;
@@ -2044,22 +2105,15 @@ div.tp-dfwv {
 
 
 
-.card-image {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 24vw;
 
-  object-fit: cover;
-  z-index: 1;
+
+
+
+.cardbutton {
+
+position: absolute;
+bottom: 4vh;
 }
-
-
-
-
-
-
-
 
 
 
@@ -2091,23 +2145,28 @@ div.tp-dfwv {
     min-width: 80vw;
     max-width: 700px;
 
-
+height: 50vh;
     background-color: rgba(255, 255, 255, 0.010);
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     position: relative;
     z-index: 1;
-    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
   }
 
   .card-image {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 40vw;
+    max-width: 60vw;
     object-fit: cover;
     z-index: 1;
+    max-height: 30vh;
   }
 
 
@@ -2115,7 +2174,7 @@ div.tp-dfwv {
 
   .card-heading {
 
-    font-size: 1.2rem;
+    font-size: 2.8rem;
     color: #ffffff;
     text-align: start;
 
@@ -2129,10 +2188,10 @@ div.tp-dfwv {
 
     color: #323232;
     text-align: left;
-    max-width: 30vw;
+    max-width: 70vw;
     margin-top: 20px;
 
-    font-size: 0.4rem;
+    font-size: 1.0rem;
     ;
     /* Responsive font size */
     font-family: 'JetBrains Mono', monospace;
@@ -2189,11 +2248,12 @@ div.tp-dfwv {
 
   flex: 1;
   margin-right: 10px;
+  min-width: 20vw;
+  max-width: 50vw;
   /* Add some space between the card and the next element */
 
 
-  min-width: 10vw;
-  max-width: 400px;
+
 
   display: flex;
   flex-direction: column;
@@ -2212,15 +2272,17 @@ div.tp-dfwv {
 }
 
 .wcard-heading {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   margin-bottom: 10px;
   font-family: 'Inter', sans-serif;
 }
 
 .wcard-subtitle {
-  font-size: 1rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   font-family: 'JetBrains Mono', monospace;
+  max-width: 600px;
+  font-weight: 600px;
 }
 
 
@@ -2247,10 +2309,11 @@ div.tp-dfwv {
     margin-right: 0;
   }
 
+ 
   .wcard-container {
     flex-direction: column;
     /* Stack items vertically on mobile */
-    align-items: flex-start;
+    align-items: center;
   }
 
 
@@ -2308,8 +2371,6 @@ div.tp-dfwv {
 
 
 
-
-
 .producttitle {
 
   width: 80%;
@@ -2333,6 +2394,33 @@ div.tp-dfwv {
 
 
 
+
+@media (max-width: 768px) {
+ 
+
+  .wwcard {
+
+    align-items: center;
+  }
+
+  .producttitle {
+
+    
+    font-size: 4.2vw;
+    /* Responsive text size */
+    
+  }
+  
+  
+
+  .wwcard-subtitle {
+   
+    font-size: 3.8vw;
+   
+   
+    max-width: 70vw;
+  }
+}
 
 
 
@@ -2457,7 +2545,7 @@ div.tp-dfwv {
 section.nvdia {
 
   width: 100%;
-  height: 100vh;
+  max-height: 80vh;
 
   background-color: #7768B1;
   z-index: 10;
@@ -2480,6 +2568,7 @@ section.nvdia {
   width: "100%";
   height: "608";
   margin-left: -15vw;
+  margin-bottom: -10px;
 }
 
 
@@ -2491,7 +2580,7 @@ section.nvdia2 {
   width: 100%;
   height: 100vh;
 
-  background-color: #F5F5FF;
+  background-color: #7768B1;
   ;
   z-index: 10;
   display: flex;
@@ -2537,7 +2626,15 @@ section.nvdia2 {
 
 
 
+.hresearch {
 
+
+  position: absolute;
+  bottom: 10vh;
+  width: 100vw;
+  max-width: 100vw;
+
+}
 
 
 
@@ -2556,7 +2653,7 @@ section.nvdia2 {
 
 .ncard-section {
   width: 100%;
-  height: 130vh;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2667,17 +2764,23 @@ section.nvdia2 {
 .card-row {
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .card-item {
-  width: 40%;
-  height: 80%;
+
   background-color: #e0e0e008;
   border-radius: 8px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  place-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* Responsive adjustments */
@@ -2690,11 +2793,8 @@ section.nvdia2 {
   .ncard-title {
     font-size: 4vw;
   }
+ 
 
-  .card-item {
-    width: 45%;
-    height: 70%;
-  }
 }
 
 @media (max-width: 480px) {
@@ -2707,10 +2807,7 @@ section.nvdia2 {
     font-size: 5vw;
   }
 
-  .card-item {
-    width: 48%;
-    height: 60%;
-  }
+  
 }
 
 
@@ -2754,6 +2851,7 @@ section.nvdia2 {
 .nncard {
   flex: 1;
   width: 90%;
+ 
   height: 30%;
   background-color: rgba(255, 255, 255, 0.051);
   display: flex;
@@ -2765,8 +2863,7 @@ section.nvdia2 {
 }
 
 .nncard-content {
-  width: 90%;
-  height: 50%;
+  
   display: flex;
   gap: 40px;
   flex-direction: column;
@@ -2784,13 +2881,42 @@ section.nvdia2 {
 
 
 
+.ncardimg {
+
+  height: 200px;
+}
+.ncardimg2 {
+
+  width: 25vw;
+}
+
+
+.ncarditmimg {
+
+width: 10vw;
+}
 
 
 
 
 
+@media (max-width: 768px) {
+  .ncardimg {
 
+    height: 120px;
+  }
+  
+  
+}
 
+@media (max-width: 480px) {
+  .ncardimg {
+
+    height: 70px;
+  }
+  
+  
+}
 
 
 
@@ -3207,6 +3333,74 @@ section.faq {
 
 
 
+/* Base styles for card */
+.pub-card {
+  width: 100%;
+  max-width: 30rem; /* 475px equivalent */
+  aspect-ratio: 475 / 366;
+  position: relative;
+  background: white;
+  box-shadow: 0 2.5rem 4.375rem rgba(113, 131, 164, 0.15); /* 40px 70px equivalent */
+  border-radius: 1.5625rem; /* 25px equivalent */
+  border: 0.0625rem solid #eff4fd; /* 1px equivalent */
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem; /* 20px equivalent */
+}
+
+/* Header section */
+.pub-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.0625rem solid rgba(21, 14, 50, 0.12); /* 1px equivalent */
+  padding-bottom: 1.25rem; /* 20px equivalent */
+}
+
+/* Title styles */
+.pub-card-title {
+  color: #2a1a6d;
+  font-size: 1.266rem; /* 20.28px equivalent */
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  line-height: 1.3; /* Line height of 26.40px equivalent */
+  max-width: 55%;
+}
+
+/* Icon container styles */
+.pub-card-icon {
+  width: 4.375rem; /* 70px equivalent */
+  height: 4.375rem; /* 70px equivalent */
+  background: #ffe86b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner icon container */
+.pub-icon-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Icon styles */
+.pub-icon {
+  width: 3.714rem; /* 59.43px equivalent */
+  height: 4.375rem; /* 70.01px equivalent */
+  /* background: #198754; */
+}
+
+/* Content section */
+.pub-card-content {
+  margin-top: 2rem; /* 32px equivalent */
+  color: #605880;
+  font-size: 0.976rem; /* 15.62px equivalent */
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.433; /* Line height of 22.40px equivalent */
+}
 
 
 
@@ -3256,6 +3450,287 @@ section.faq {
 
 
 
+
+
+
+
+/* Base styles for card */
+.pub-card {
+  width: 100%;
+  max-width: 30rem; /* 475px equivalent */
+  aspect-ratio: 475 / 366;
+  position: relative;
+  background: white;
+  box-shadow: 0 2.5rem 4.375rem rgba(113, 131, 164, 0.15); /* 40px 70px equivalent */
+  border-radius: 1.5625rem; /* 25px equivalent */
+  border: 0.0625rem solid #eff4fd; /* 1px equivalent */
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem; /* 20px equivalent */
+}
+
+/* Header section */
+.pub-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.0625rem solid rgba(21, 14, 50, 0.12); /* 1px equivalent */
+  padding-bottom: 1.25rem; /* 20px equivalent */
+}
+
+/* Title styles */
+.pub-card-title {
+  color: #2a1a6d;
+  font-size: 1.266rem; /* 20.28px equivalent */
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  line-height: 1.3; /* Line height of 26.40px equivalent */
+  max-width: 55%;
+}
+
+/* Icon container styles */
+.pub-card-icon {
+  width: 4.375rem; /* 70px equivalent */
+  height: 4.375rem; /* 70px equivalent */
+  background: #ffe86b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner icon container */
+.pub-icon-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Icon styles */
+.pub-icon {
+  width: 2.714rem; /* 59.43px equivalent */
+  height: 2.375rem; /* 70.01px equivalent */
+ 
+}
+
+/* Content section */
+.pub-card-content {
+  margin-top: 2rem; /* 32px equivalent */
+  color: #605880;
+  font-size: 0.976rem; /* 15.62px equivalent */
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.433; /* Line height of 22.40px equivalent */
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .pub-card-title {
+    font-size: 0.633rem; /* 10.14px equivalent */
+    line-height: 1.15; /* Adjusted line height */
+  }
+
+  .pub-card-icon {
+    width: 2.1875rem; /* 35px equivalent */
+    height: 2.1875rem; /* 35px equivalent */
+  }
+
+  .pub-icon-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pub-icon {
+    width: 1.857rem; /* 29.71px equivalent */
+    height: 2.1875rem; /* 35px equivalent */
+  }
+
+  .pub-card-content {
+    font-size: 0.488rem; /* 7.81px equivalent */
+    line-height: 1.2165; /* Adjusted line height */
+  }
+
+  .grid-column {
+    
+    grid-template-rows: 25vh 25vh 25vh;
+    
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contactus {
+  height: 200vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  gap:10vh;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px; /* Optional padding for responsiveness */
+  box-sizing: border-box;
+  background-color: #7768B1;
+}
+
+.contactus-card {
+   /* Takes up 90% of the viewport width */
+  width: 80vw; /* Optional max-width for larger screens */
+  height: 80vh; /* Takes up 90% of the viewport height */
+  position: relative;
+  background: url('images/contact.png') center/cover no-repeat; /* Background image */
+  padding: 10px; /* Padding around the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Black shadow for the card */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3vw;
+ 
+}
+
+.contactus-card-overlay {
+  background-color: rgba(49, 46, 46, 0.185); /* 50% opacity overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px; /* Padding for content inside the overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 3vw;
+  margin: 10px;
+
+   /* Ensure padding is included in the width and height */
+}
+
+
+
+.contactus-card2 {
+  /* Takes up 90% of the viewport width */
+ width: 80vw; /* Optional max-width for larger screens */
+ height: 40vh; /* Takes up 90% of the viewport height */
+ position: relative;
+ opacity: 0.9;
+ padding: 10px; /* Padding around the card */
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.162); /* Black shadow for the card */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 3vw;
+ background-color: rgba(201, 201, 201, 0.601);
+
+}
+
+
+.contactus-card-overlay2 {
+  background-color: rgba(201, 201, 201, 0.601); /* 50% opacity overlay */
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px; /* Padding for content inside the overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 3vw;
+  margin: 10px;
+
+   /* Ensure padding is included in the width and height */
+}
+
+.contactus-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Centers the text */
+  z-index: 1; /* Ensures content is above the overlay */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contactus-card {
+    height: 90vh; /* Allows the card height to adjust based on content on smaller screens */
+  }
+}
+
+
+
+
+
+.doctor {
+
+  width: 30vw;
+  max-height: 70vh;
+  right: 10vh;
+  position: absolute;
+  bottom: 0;
+
+}
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .doctor {
+
+    width: 50vw;
+    max-height: 70vh;
+    right: 5vw;
+    position: absolute;
+    bottom: 0;
+  
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-card {
+
+  width: 80vw;  position: relative; overflow-x: hidden; display: grid; place-items: center;
+
+  background-color: #000;
+}
 
 
 .gs-dev-tools {
@@ -3265,4 +3740,9 @@ section.faq {
   display: none;
   /* Ensures it is on top of all other elements */
 
+}
+
+/* Add this to your CSS file */
+.subtitle-new {
+  color: #212121; /* New color for the subtitle */
 }
