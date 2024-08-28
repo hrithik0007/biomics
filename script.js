@@ -281,8 +281,8 @@ tl.fromTo(
         scrollTrigger: {
           trigger: ".pub-grid",
           scrub: true,
-          start: "top 80%",
-          end: "center 60%",
+          start: "top 50%",
+          end: "center 30%",
           // markers: true,
           onUpdate: (self) => {
             // Manually update the progress of the animation

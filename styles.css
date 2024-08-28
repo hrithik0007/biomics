@@ -2330,6 +2330,15 @@ height: 50vh;
     cursor: pointer;
   }
 
+
+  .wcard-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    max-width: 70vw;
+    font-weight: 600px;
+  }
+  
 }
 
 
@@ -3581,6 +3590,7 @@ section.faq {
   padding: 0 20px; /* Optional padding for responsiveness */
   box-sizing: border-box;
   background-color: #7768B1;
+  z-index: 20000;
 }
 
 .contactus-card {
