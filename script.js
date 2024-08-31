@@ -458,23 +458,6 @@ $('.features-item').on('click', function() {
 
 
 
-const tl3 = gsap.from('.box', {
-  duration: 1.5, 
-  stagger: 0.75,
-  yPercent: 100, 
-  opacity: 0
-})
-
-ScrollTrigger.create({
-  animation: tl3,
-  trigger: '.wrapper',
-  // markers: true,
-  start: 'top top',
-  end: "bottom bottom",
-  scrub: 1,
-  pin: '.wrapper',
-  // pinSpacing: false
-})
 
 
 
@@ -534,37 +517,81 @@ counters.forEach((counter) => {
 
 
 
+const tl3 = gsap.from('.box', {
+  duration: 1.5, 
+  stagger: 0.75,
+  yPercent: 100, 
+  opacity: 0
+})
 
-const featuresCards = document.querySelectorAll(".features-card");
+ScrollTrigger.create({
+  animation: tl3,
+  trigger: '.wrapper',
+   markers: true,
+  start: 'top top',
+  end: "bottom bottom",
+  scrub: 1,
+  pin: '.wrapper',
+  // pinSpacing: false
+})
 
-    // Loop through each card to apply animation
-    featuresCards.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        {
-          // Initial state
-          opacity: 0,
-          scale: 0.5,
-          xPercent: -100,
-          yPercent: -100,
-          rotateZ: 0,
-        },
-        {
-          // Animated state
-          opacity: 1,
-          scale: 1,
-          xPercent: 0,
-          yPercent: 0,
-          rotateZ: 360, // Rotate the card along Z-axis
-          duration: 2,
-          ease: "power1.out",
-          scrollTrigger: {
-            trigger: ".features-container",
-            start: "top 90%", // Animation starts when card enters 80% of the viewport
-            end: "bottom 90%", // Animation ends when card leaves 20% of the viewport
-            scrub: true, // Sync animation with the scrollbar
-            // markers: true, // Remove or set to false in production
-          },
-        }
-      );
-    });
+
+    const tl4 = gsap.fromTo(
+      ".features-card-left",
+      {
+        // Initial state
+        opacity: 0,
+        scale: 0.5,
+        xPercent: -100,
+        yPercent: -100,
+        rotateZ: 0,
+      },
+      {
+        // Animated state
+        opacity: 1,
+        scale: 1,
+        xPercent: 0,
+        yPercent: 0,
+        
+        duration: 2,
+        ease: "power1.out",
+        
+      }
+    )
+    const tl5 = gsap.fromTo(
+      ".features-card-right",
+      {
+        // Initial state
+        opacity: 0,
+        scale: 0.5,
+        xPercent: 100,
+        yPercent: 100,
+        rotateZ: 0,
+      },
+      {
+        // Animated state
+        opacity: 1,
+        scale: 1,
+        xPercent: 0,
+        yPercent: 0,
+        
+        duration: 2,
+        ease: "power1.out",
+        
+      }
+    )
+   // Create a master timeline
+const masterTimeline = gsap.timeline();
+
+// Add tl4 and tl5 to the master timeline
+masterTimeline.add(tl4, 0).add(tl5, 0);
+
+// Create ScrollTrigger for the master timeline
+ScrollTrigger.create({
+  animation: masterTimeline,
+  trigger: ".features-container",
+  start: "top 90%", // Animation starts when card enters 90% of the viewport
+  end: "bottom 90%", // Animation ends when card leaves 90% of the viewport
+  scrub: true, // Sync animation with the scrollbar
+  // markers: true, // Uncomment to see markers in production
+});

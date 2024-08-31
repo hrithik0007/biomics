@@ -1653,6 +1653,7 @@ p {
 }
 
 footer {
+  position: relative;
   padding: 2rem;
 }
 
@@ -3097,14 +3098,7 @@ width: 10vw;
 .card-item:hover .ncarditmimg {
   filter: grayscale(0%); /* Remove grayscale on hover */
 }
-@keyframes marquee {
-  0% {
-      transform: translateX(100%); /* Start from the right */
-  }
-  100% {
-      transform: translateX(-100%); /* End at the left */
-  }
-}
+
 
 
 
@@ -3519,11 +3513,12 @@ section.faq {
 
 /* Expert Card Styles */
 .expert-card {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: relative;
-  overflow: hidden;
-  
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -3595,7 +3590,7 @@ section.faq {
   bottom: 20px;
   left: 20px;
   color: white;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
@@ -3613,7 +3608,7 @@ section.faq {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.9));
 }
 
-.expert-card:hover .expert-card-content {
+.box:hover .expert-card-content {
   opacity: 1;
 }
 
@@ -4663,6 +4658,7 @@ height: 100vh; }
         display: flex;
         flex-direction: column;
         width: 100%;
+        height: 200vh;
         justify-content: center;
         align-items: center;
         min-height: 100%;
@@ -4673,10 +4669,11 @@ height: 100vh; }
       
       #grid-container {
         position: relative;
-        width: 80vw;
-        height: 200vh;
+        width: 60%;
+        height: 150vh;
         display: flex;
         flex-direction: column;
+        overflow: visible;
         /*   transform: translateY(100vh); */
       }
       
@@ -4690,17 +4687,14 @@ height: 100vh; }
       }
       
       .box {
-        background: tomato;
+        background: rgb(33, 0, 33);
         width: 100%;
         height: 100%;
         margin-bottom: 1rem;
+        overflow: visible;
       }
       
-      .box img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
+      
       
       @media screen and (min-width: 800px) {
         /** COLUMN 1 **/
@@ -5152,4 +5146,9 @@ height: 100vh; }
   body {
     flex-direction: column;
   }
+}
+
+
+.box:hover .expert-card-content {
+  opacity: 1;
 }
