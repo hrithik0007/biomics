@@ -18,7 +18,11 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-     
+      <link rel="stylesheet" href="vendor/css/bundle.min.css">
+      <link rel="stylesheet" href="vendor/css/LineIcons.min.css">
+      <!-- Plugin Css -->
+
+
 
 
      
@@ -143,22 +147,30 @@
 
         
             <ul class="header__nav">
+              <div class="header_div">
               <li class="header__list">
-                <a class="header__link" href="#">HomePage</a>
+                <a class="header__link" href="index.html">HomePage</a>
               </li>
+            </div>
+            <div class="header_div">
               <li class="header__list">
-                <a class="header__link" href="#">About</a>
+                <a class="header__link" href="about.html">About</a>
               </li>
+            </div>  <div class="header_div">
               <li class="header__list">
                 <a class="header__link" href="#">Services</a>
               </li>
+
+             </div> <div class="header_div">
               <li class="header__list">
-                <a class="header__link" href="#">Products</a>
+                <a class="header__link" href="products.html">Products</a>
               </li>
-              
+             </div> <div class="header_div">
               <li class="header__list">
                 <a class="header__link" href="#">Contact</a>
               </li>
+              </div>
+           
             </ul>
             <div class="hbutton">
               <div class="button-text">Get Started</div>
@@ -374,9 +386,9 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
             <div class=" desktop cardbutton button " style="margin-top: 40px; align-self: start; width: 30%; margin-left: 0;">
               <div class="button-text" style="width: 50%">Get Started</div>
             </div>
-          <img  src="https://digi.xigabyte.pp.ua/images/2.png" alt="Card Image" class="card-image text01">
-          <img  src="images/lungs.png" alt="Card Image" class="card-image pro">
-          <img  src="https://digi.xigabyte.pp.ua/images/2.png" alt="Card Image" class="card-image proo">
+          <img  src="https://digi.xigabyte.pp.ua/images/2.png" alt="Card Image" class="card-image cardimage">
+          <img  src="images/lungs.png" alt="Card Image" class="card-image cardimage2">
+          <img  src="https://digi.xigabyte.pp.ua/images/2.png" alt="Card Image" class="card-image cardimage3">
         </div>
 
       </div>
@@ -398,6 +410,20 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
 
       <div class="wcard-container">
         <!-- Multiple cards for scrolling -->
+
+
+
+
+
+
+
+        <div class="wcard-flip">
+          <div class="flip">
+              <div class="front">
+
+
+
+
         <div class="wcard">
           <h1 class="wcard-heading ">We are DigiBioMics</h1>
           <p class="wcard-subtitle ">Personalized antidepressant therapy prediction system by DigiBiomics. Enhances
@@ -408,11 +434,44 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
           
           
         </div>
+        </div>
+
+
+        <div class="back">
+
+          <div class="wcard">
+            <h1 class="wcard-heading ">We are DigiBioMics</h1>
+            <p class="wcard-subtitle ">Personalized antideps.</p>
+              <div class="wbutton" style="margin-top: 40px; align-self: center;">
+                <div class="wbutton-text" style="width: 200px">Get Started</div>
+              </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- Add more cards as needed -->
 
 
 
-        <div class="wwcard">
+        
+      </div>
+
+
+
+      </div>
+      </div>
+      <div class="wwcard">
         <p class="producttitle ">Understand how DigiBioMics can help you</p>
         <p class="wwcard-subtitle ">Not Conviced Yet? <br>Try it out.</p>
           
@@ -493,7 +552,11 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
             <img  src="images/18.png" alt="Card Image" class="ncarditmimg">
           </div>
           
+
+          
+          
         </div>
+        
       </div>
      </div>
 
@@ -675,7 +738,7 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
       </section>
       
 
-
+      
 
 
       <section class="faq">
@@ -685,7 +748,17 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
         </h2>
 <div class="unique-section">
        
-        <div class="unique-container left-container"></div>
+        <div class="unique-container left-container">
+
+          <div class="question-container" data-answer="answer-1">
+            <h2>What areas does DigiBiomics specialize in?</h2>
+            <div class="question-icon"> </div>
+          </div>
+          <div class="question-container" data-answer="answer-2">
+            <h2>Question 2</h2>
+            <div class="question-icon"> </div>
+          </div>
+        </div>
         <div class="unique-container right-container">
 
           <div class="circle circle-1"></div>
@@ -693,7 +766,12 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
 <div class="circle circle-3"></div>
           <div class="right-inner-container">
 
-            <div class="right-innerr-container"></div>
+            <div class="right-innerr-container" id="answer-1">
+              <h2 class= "answers" >Answer to Question 1</h2>
+            </div>
+            <div class="right-innerr-container" id="answer-2">
+              <h2 class= "answers" >Answer to Question 2</h2>
+            </div>
           </div>
         </div>
       </div>
@@ -718,11 +796,16 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
         <div class="smooth-sec-one">
             
 
+
           <div class="headline-container">
             <span class="primary-color">Our Publications </span>
          
           </div>
+
+
           </div>
+
+
       
           <div class="pub-grid">
 
@@ -895,7 +978,771 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
       
         
     
-    
+    <section class="nvdia2">
+      
+      
+      <svg
+      class=" featuresvg"
+  id="Layer_1"
+  data-name="Layer 1"
+  viewBox="0 0 1022 420"
+  version="1.1"
+  sodipodi:docname="Jessicasombr583_without logo_sembrilho.svg"
+  inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <sodipodi:namedview
+    id="namedview53"
+    pagecolor="#ffffff"
+    bordercolor="#000000"
+    borderopacity="0.25"
+    inkscape:showpageshadow="2"
+    inkscape:pageopacity="0.0"
+    inkscape:pagecheckerboard="0"
+    inkscape:deskcolor="#d1d1d1"
+    inkscape:zoom="1.2367906"
+    inkscape:cx="511"
+    inkscape:cy="210.22152"
+    inkscape:window-width="1850"
+    inkscape:window-height="1016"
+    inkscape:window-x="0"
+    inkscape:window-y="0"
+    inkscape:window-maximized="1"
+    inkscape:current-layer="Layer_1" />
+ <defs
+    id="defs7">
+   <style
+      id="style1">
+     .cls-1 {
+       fill: url(#linear-gradient);
+     }
+
+     .cls-2 {
+       fill: url(#linear-gradient-2);
+     }
+
+     .cls-3 {
+       fill: url(#linear-gradient-3);
+     }
+
+     .cls-4 {
+       fill: url(#linear-gradient-4);
+     }
+
+     .cls-5 {
+       fill: url(#linear-gradient-5);
+     }
+
+     .cls-6 {
+       fill: url(#linear-gradient-6);
+     }
+
+     .cls-7, .cls-8 {
+       fill: #fff;
+     }
+
+     .cls-7 {
+       opacity: 0.21;
+     }
+
+     .cls-9 {
+       fill: url(#linear-gradient-7);
+     }
+
+     .cls-10 {
+       fill: url(#linear-gradient-8);
+     }
+
+     .cls-11 {
+       fill: url(#linear-gradient-9);
+     }
+
+     .cls-12 {
+       fill: url(#linear-gradient-10);
+     }
+
+     .cls-13 {
+       fill: url(#linear-gradient-11);
+     }
+
+     .cls-14 {
+       fill: url(#linear-gradient-12);
+     }
+
+     .cls-15 {
+       fill: url(#linear-gradient-13);
+     }
+
+     .cls-16 {
+       fill: url(#linear-gradient-14);
+     }
+
+     .cls-17 {
+       fill: url(#linear-gradient-15);
+     }
+
+     .cls-18 {
+       isolation: isolate;
+     }
+
+     .cls-19 {
+       fill: url(#linear-gradient-16);
+     }
+
+     .cls-20 {
+       fill: url(#linear-gradient-17);
+     }
+
+     .cls-21 {
+       fill: url(#linear-gradient-18);
+     }
+
+     .cls-22 {
+       fill: url(#linear-gradient-19);
+     }
+
+     .cls-23 {
+       fill: url(#linear-gradient-20);
+     }
+
+     .cls-24 {
+       fill: url(#linear-gradient-21);
+     }
+
+     .cls-25 {
+       fill: url(#linear-gradient-22);
+     }
+
+     .cls-26 {
+       fill: url(#linear-gradient-23);
+     }
+
+     .cls-27 {
+       fill: url(#linear-gradient-24);
+     }
+
+     .cls-28 {
+       fill: url(#linear-gradient-25);
+     }
+
+     .cls-29 {
+       fill: url(#linear-gradient-26);
+     }
+
+     .cls-30 {
+       fill: url(#linear-gradient-27);
+     }
+
+     .cls-31 {
+       fill: url(#linear-gradient-28);
+     }
+
+     .cls-32 {
+       fill: url(#linear-gradient-29);
+     }
+
+     .cls-33 {
+       fill: url(#linear-gradient-30);
+     }
+
+     .cls-34 {
+       fill: url(#linear-gradient-31);
+     }
+
+     .cls-35 {
+       fill: url(#linear-gradient-32);
+     }
+
+     .cls-36 {
+       fill: url(#linear-gradient-33);
+     }
+   </style>
+   <linearGradient
+      id="linear-gradient"
+      x1="326.548"
+      y1="175.14"
+      x2="688.029"
+      y2="172.14"
+      gradientUnits="userSpaceOnUse">
+     <stop
+        offset="0"
+        stop-color="#fff"
+        stop-opacity="0.088"
+        id="stop1" />
+     <stop
+        offset="0.512"
+        stop-color="#fff"
+        id="stop2" />
+     <stop
+        offset="1"
+        stop-color="#fff"
+        stop-opacity="0"
+        id="stop3" />
+   </linearGradient>
+   <linearGradient
+      id="linear-gradient-2"
+      x1="327.244"
+      y1="259.002"
+      x2="688.725"
+      y2="256.002"
+      xlink:href="#linear-gradient" />
+   <linearGradient
+      id="linear-gradient-3"
+      x1="327.036"
+      y1="234.038"
+      x2="688.518"
+      y2="231.038"
+      xlink:href="#linear-gradient" />
+   <linearGradient
+      id="linear-gradient-4"
+      x1="326.56"
+      y1="176.671"
+      x2="688.042"
+      y2="173.671"
+      xlink:href="#linear-gradient" />
+   <linearGradient
+      id="linear-gradient-5"
+      x1="327.258"
+      y1="260.791"
+      x2="688.74"
+      y2="257.791"
+      xlink:href="#linear-gradient" />
+   <linearGradient
+      id="linear-gradient-6"
+      x1="327.052"
+      y1="235.91"
+      x2="688.534"
+      y2="232.91"
+      xlink:href="#linear-gradient" />
+   <linearGradient
+      id="linear-gradient-7"
+      x1="326.548"
+      y1="180.14"
+      x2="688.029"
+      y2="177.14"
+      xlink:href="#linear-gradient" />
+   
+   <linearGradient
+      id="linear-gradient-8"
+      x1="327.244"
+      y1="264.002"
+      x2="688.725"
+      y2="261.002"
+      xlink:href="#linear-gradient" />
+   <linearGradient
+      id="linear-gradient-9"
+      x1="327.036"
+      y1="239.038"
+      x2="688.518"
+      y2="236.038"
+      xlink:href="#linear-gradient" />
+   <linearGradient
+      id="linear-gradient-10"
+      x1="326.56"
+      y1="181.671"
+      x2="688.042"
+      y2="178.671"
+      xlink:href="#linear-gradient" />
+   <linearGradient
+      id="linear-gradient-11"
+      x1="327.258"
+      y1="265.791"
+      x2="688.74"
+      y2="262.791"
+      xlink:href="#linear-gradient" />
+   <linearGradient
+      id="linear-gradient-12"
+      x1="327.052"
+      y1="240.91"
+      x2="688.534"
+      y2="237.91"
+      xlink:href="#linear-gradient" />
+   <linearGradient
+      id="linear-gradient-13"
+      x1="785.817"
+      y1="281.073"
+      x2="935.474"
+      y2="281.073"
+      gradientUnits="userSpaceOnUse">
+     <stop
+        offset="0"
+        stop-color="#02265a"
+        id="stop4" />
+     <stop
+        offset="1"
+        stop-color="#02265a"
+        stop-opacity="0"
+        id="stop5" />
+   </linearGradient>
+   <linearGradient
+      id="linear-gradient-14"
+      x1="260.087"
+      y1="273.673"
+      x2="409.744"
+      y2="273.673"
+      xlink:href="#linear-gradient-13" />
+   <linearGradient
+      id="linear-gradient-15"
+      x1="85.947"
+      y1="266.002"
+      x2="281.421"
+      y2="260.276"
+      xlink:href="#linear-gradient-13" />
+   <linearGradient
+      id="linear-gradient-16"
+      x1="138.044"
+      y1="176.363"
+      x2="281.72"
+      y2="178.869"
+      gradientUnits="userSpaceOnUse">
+     <stop
+        offset="0"
+        stop-color="#fff"
+        id="stop6" />
+     <stop
+        offset="1"
+        stop-color="#99b4ff"
+        id="stop7" />
+   </linearGradient>
+   <linearGradient
+      id="linear-gradient-17"
+      x1="140.058"
+      y1="178.004"
+      x2="283.65"
+      y2="180.509"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-18"
+      x1="133.691"
+      y1="201.421"
+      x2="284.896"
+      y2="204.058"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-19"
+      x1="47.387"
+      y1="254.251"
+      x2="188.608"
+      y2="256.714"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-20"
+      x1="47.73"
+      y1="255.863"
+      x2="188.936"
+      y2="258.326"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-21"
+      x1="46.237"
+      y1="279.364"
+      x2="188.827"
+      y2="281.851"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-22"
+      x1="148.044"
+      y1="326.237"
+      x2="288.447"
+      y2="328.686"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-23"
+      x1="147.83"
+      y1="327.84"
+      x2="288.241"
+      y2="330.289"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-24"
+      x1="147.962"
+      y1="351.369"
+      x2="287.68"
+      y2="353.806"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-25"
+      x1="677.065"
+      y1="176.363"
+      x2="820.742"
+      y2="178.869"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-26"
+      x1="679.079"
+      y1="178.004"
+      x2="822.671"
+      y2="180.509"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-27"
+      x1="672.712"
+      y1="201.421"
+      x2="823.917"
+      y2="204.058"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-28"
+      x1="763.849"
+      y1="270.276"
+      x2="905.071"
+      y2="272.739"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-29"
+      x1="764.193"
+      y1="271.889"
+      x2="905.399"
+      y2="274.351"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-30"
+      x1="762.699"
+      y1="295.39"
+      x2="905.29"
+      y2="297.877"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-31"
+      x1="673.897"
+      y1="334.263"
+      x2="814.3"
+      y2="336.712"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-32"
+      x1="673.683"
+      y1="335.866"
+      x2="814.094"
+      y2="338.315"
+      xlink:href="#linear-gradient-16" />
+   <linearGradient
+      id="linear-gradient-33"
+      x1="673.815"
+      y1="359.395"
+      x2="813.533"
+      y2="361.832"
+      xlink:href="#linear-gradient-16" />
+ </defs>
+ <title
+    id="title7">Jessicasombr583</title>
+ 
+ <g
+    id="g9">
+   <path
+      class="cls-1"
+      d="M531.378,217.875h-96.14a34.354,34.354,0,0,1-34.315-34.315V164.048a27.9,27.9,0,0,0-27.864-27.864H268.849v-5H373.06a32.9,32.9,0,0,1,32.864,32.864V183.56a29.348,29.348,0,0,0,29.315,29.315h96.14Z"
+      id="path7" />
+   <path
+      class="cls-2"
+      d="M372.784,303.864H247.345v-5H372.784a28.172,28.172,0,0,0,28.14-28.141V246.015a33.177,33.177,0,0,1,33.14-33.14h57.981v5H434.064a28.171,28.171,0,0,0-28.14,28.14v24.708A33.178,33.178,0,0,1,372.784,303.864Z"
+      id="path8" />
+   <path
+      class="cls-3"
+      d="M370.614,254.175H247.345v-5H370.614a15.668,15.668,0,0,0,15.65-15.65,20.674,20.674,0,0,1,20.65-20.649h94.464v5H406.915a15.668,15.668,0,0,0-15.65,15.649A20.674,20.674,0,0,1,370.614,254.175Z"
+      id="path9" />
+ </g>
+ <g
+    id="g12">
+   <path
+      class="cls-4"
+      d="M553.485,217.875h-96.14v-5h96.14A29.348,29.348,0,0,0,582.8,183.56V164.048a32.9,32.9,0,0,1,32.864-32.864h104.21v5H615.664A27.9,27.9,0,0,0,587.8,164.048V183.56A34.354,34.354,0,0,1,553.485,217.875Z"
+      id="path10" />
+   <path
+      class="cls-5"
+      d="M741.378,303.864H615.939a33.178,33.178,0,0,1-33.14-33.141V246.015a28.171,28.171,0,0,0-28.14-28.14H496.679v-5H554.66a33.177,33.177,0,0,1,33.14,33.14v24.708a28.172,28.172,0,0,0,28.14,28.141H741.378Z"
+      id="path11" />
+   <path
+      class="cls-6"
+      d="M741.378,254.175H618.11a20.674,20.674,0,0,1-20.65-20.65,15.668,15.668,0,0,0-15.65-15.649H487.345v-5h94.464a20.674,20.674,0,0,1,20.65,20.649,15.668,15.668,0,0,0,15.65,15.65H741.378Z"
+      id="path12" />
+ </g>
+ 
+ <g
+    id="g19">
+   <path
+      class="cls-9"
+      d="M531.378,222.875h-96.14a34.354,34.354,0,0,1-34.315-34.315V169.048a27.9,27.9,0,0,0-27.864-27.864H268.849v-5H373.06a32.9,32.9,0,0,1,32.864,32.864V188.56a29.348,29.348,0,0,0,29.315,29.315h96.14Z"
+      id="path17" />
+   <path
+      class="cls-10"
+      d="M372.784,308.864H247.345v-5H372.784a28.172,28.172,0,0,0,28.14-28.141V251.015a33.177,33.177,0,0,1,33.14-33.14h57.981v5H434.064a28.171,28.171,0,0,0-28.14,28.14v24.708A33.178,33.178,0,0,1,372.784,308.864Z"
+      id="path18" />
+   <path
+      class="cls-11"
+      d="M370.614,259.175H247.345v-5H370.614a15.668,15.668,0,0,0,15.65-15.65,20.674,20.674,0,0,1,20.65-20.649h94.464v5H406.915a15.668,15.668,0,0,0-15.65,15.649A20.674,20.674,0,0,1,370.614,259.175Z"
+      id="path19" />
+ </g>
+ 
+ <g
+    id="g22">
+   <path
+      class="cls-12"
+      d="M553.485,222.875h-96.14v-5h96.14A29.348,29.348,0,0,0,582.8,188.56V169.048a32.9,32.9,0,0,1,32.864-32.864h104.21v5H615.664A27.9,27.9,0,0,0,587.8,169.048V188.56A34.354,34.354,0,0,1,553.485,222.875Z"
+      id="path20" />
+   <path
+      class="cls-13"
+      d="M741.378,308.864H615.939a33.178,33.178,0,0,1-33.14-33.141V251.015a28.171,28.171,0,0,0-28.14-28.14H496.679v-5H554.66a33.177,33.177,0,0,1,33.14,33.14v24.708a28.172,28.172,0,0,0,28.14,28.141H741.378Z"
+      id="path21" />
+   <path
+      class="cls-14"
+      d="M741.378,259.175H618.11a20.674,20.674,0,0,1-20.65-20.65,15.668,15.668,0,0,0-15.65-15.649H487.345v-5h94.464a20.674,20.674,0,0,1,20.65,20.649,15.668,15.668,0,0,0,15.65,15.65H741.378Z"
+      id="path22" />
+ </g>
+
+ <g
+    id="g48">
+   <rect
+      class="cls-15"
+      x="764.646"
+      y="186.23"
+      width="202.709"
+      height="189.686"
+      id="rect22" />
+   <rect
+      class="cls-16"
+      x="238.916"
+      y="178.83"
+      width="202.709"
+      height="189.686"
+      id="rect23" />
+   <rect
+      class="cls-17"
+      x="139.064"
+      y="215.41"
+      width="159.436"
+      height="93.401"
+      id="rect24" />
+   <g
+      class="cls-18"
+      id="g27">
+     <path
+        class="cls-19"
+        d="M312.255,98.214l-69.643,40.472-.1,126.636,69.643-40.472c2.794-1.624,4.192-3.749,4.2-5.877l.1-126.636C316.447,94.466,315.049,96.591,312.255,98.214Z"
+        id="path24" />
+     <path
+        class="cls-20"
+        d="M152.084,98.212c-2.846-1.643-4.267-3.8-4.261-5.957l-.1,126.636c-.006,2.155,1.415,4.313,4.261,5.957l70.1,40.472.1-126.636Z"
+        id="path25" />
+     <path
+        class="cls-21"
+        d="M222.182,138.684l-.1,126.636c5.661,3.268,14.811,3.268,20.429,0l.1-126.636C236.993,141.952,227.843,141.952,222.182,138.684Z"
+        id="path26" />
+     <path
+        class="cls-8"
+        d="M312.188,86.378c5.661,3.268,5.69,8.568.067,11.836l-69.643,40.472c-5.619,3.265-14.769,3.265-20.429,0l-70.1-40.472c-5.655-3.265-5.685-8.565-.067-11.83L221.66,45.909c5.624-3.268,14.774-3.268,20.429,0Z"
+        id="path27" />
+   </g>
+   <g
+      class="cls-18"
+      id="g31">
+     <path
+        class="cls-22"
+        d="M219.181,212.865l-69.643,40.472-.1,53.027,69.643-40.472c2.794-1.624,4.192-3.749,4.2-5.877l.1-53.027C223.374,209.116,221.975,211.241,219.181,212.865Z"
+        id="path28" />
+     <path
+        class="cls-23"
+        d="M59.01,212.862c-2.846-1.643-4.267-3.8-4.261-5.957l-.1,53.027c-.006,2.155,1.415,4.313,4.261,5.957L129,306.36l.1-53.026Z"
+        id="path29" />
+     <path
+        class="cls-24"
+        d="M129.109,253.334,129,306.36c5.661,3.268,14.811,3.268,20.429,0l.1-53.027C143.92,256.6,134.769,256.6,129.109,253.334Z"
+        id="path30" />
+     <path
+        class="cls-8"
+        d="M219.115,201.028c5.661,3.268,5.69,8.568.067,11.836l-69.643,40.472c-5.619,3.265-14.769,3.265-20.429,0l-70.1-40.472c-5.655-3.265-5.685-8.565-.067-11.83l69.643-40.472c5.624-3.268,14.774-3.268,20.429,0Z"
+        id="path31" />
+   </g>
+   <g
+      class="cls-18"
+      id="g35">
+     <path
+        class="cls-25"
+        d="M319.033,297.105,249.39,337.577l-.1,28.49L318.929,325.6c2.794-1.624,4.192-3.749,4.2-5.877l.1-28.49C323.225,293.357,321.827,295.482,319.033,297.105Z"
+        id="path32" />
+     <path
+        class="cls-26"
+        d="M158.861,297.1c-2.846-1.643-4.267-3.8-4.261-5.957l-.1,28.49c-.006,2.155,1.415,4.313,4.261,5.957l70.1,40.472.1-28.49Z"
+        id="path33" />
+     <path
+        class="cls-27"
+        d="M228.96,337.575l-.1,28.49c5.661,3.268,14.811,3.268,20.429,0l.1-28.49C243.771,340.843,234.621,340.843,228.96,337.575Z"
+        id="path34" />
+     <path
+        class="cls-8"
+        d="M318.966,285.269c5.661,3.268,5.69,8.568.067,11.836L249.39,337.577c-5.619,3.265-14.769,3.265-20.429,0l-70.1-40.472c-5.655-3.265-5.685-8.565-.067-11.83L228.438,244.8c5.624-3.268,14.774-3.268,20.429,0Z"
+        id="path35" />
+   </g>
+   <g
+      class="cls-18"
+      id="g39">
+     <path
+        class="cls-28"
+        d="M851.276,98.214l-69.643,40.472-.1,126.636,69.643-40.472c2.794-1.624,4.192-3.749,4.2-5.877l.1-126.636C855.468,94.466,854.07,96.591,851.276,98.214Z"
+        id="path36" />
+     <path
+        class="cls-29"
+        d="M691.1,98.212c-2.846-1.643-4.267-3.8-4.261-5.957l-.1,126.636c-.006,2.155,1.415,4.313,4.261,5.957l70.1,40.472.1-126.636Z"
+        id="path37" />
+     <path
+        class="cls-30"
+        d="M761.2,138.684l-.1,126.636c5.661,3.268,14.811,3.268,20.429,0l.1-126.636C776.014,141.952,766.864,141.952,761.2,138.684Z"
+        id="path38" />
+     <path
+        class="cls-8"
+        d="M851.21,86.378c5.661,3.268,5.69,8.568.067,11.836l-69.643,40.472c-5.619,3.265-14.769,3.265-20.429,0L691.1,98.212c-5.655-3.265-5.685-8.565-.067-11.83l69.643-40.472c5.624-3.268,14.774-3.268,20.429,0Z"
+        id="path39" />
+   </g>
+   <g
+      class="cls-18"
+      id="g43">
+     <path
+        class="cls-31"
+        d="M935.644,228.89,866,269.362l-.1,53.027,69.643-40.472c2.794-1.624,4.192-3.749,4.2-5.877l.1-53.027C939.836,225.141,938.437,227.266,935.644,228.89Z"
+        id="path40" />
+     <path
+        class="cls-32"
+        d="M775.472,228.888c-2.846-1.643-4.267-3.8-4.261-5.957l-.1,53.027c-.006,2.155,1.415,4.313,4.261,5.957l70.1,40.472.1-53.026Z"
+        id="path41" />
+     <path
+        class="cls-33"
+        d="M845.571,269.359l-.1,53.026c5.661,3.268,14.811,3.268,20.429,0l.1-53.027C860.382,272.627,851.232,272.627,845.571,269.359Z"
+        id="path42" />
+     <path
+           
+        class="cls-8"
+        d="M935.577,217.054c5.661,3.268,5.69,8.568.067,11.836L866,269.362c-5.619,3.265-14.769,3.265-20.429,0l-70.1-40.472c-5.655-3.265-5.685-8.565-.067-11.83l69.643-40.472c5.624-3.268,14.774-3.268,20.429,0Z"
+        id="path43" />
+     <image
+      id="logo"
+      xlink:href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/768px-Facebook_Logo_2023.png"
+      x="810"
+      y="180"
+      width="100"
+      height="100"
+      style="opacity: 0; " />
+   </g>
+
+   
+   <g
+      class="cls-18"
+      id="g47">
+     <path
+        class="cls-34"
+        d="M844.886,305.131,775.242,345.6l-.1,28.49,69.643-40.472c2.794-1.624,4.192-3.749,4.2-5.877l.1-28.49C849.078,301.383,847.679,303.508,844.886,305.131Z"
+        id="path44" />
+     <path
+        class="cls-35"
+        d="M684.714,305.129c-2.846-1.643-4.267-3.8-4.261-5.957l-.1,28.49c-.006,2.155,1.415,4.313,4.261,5.957l70.1,40.472.1-28.49Z"
+        id="path45" />
+     <path
+        class="cls-36"
+        d="M754.813,345.6l-.1,28.49c5.661,3.268,14.811,3.268,20.429,0l.1-28.49C769.624,348.869,760.474,348.869,754.813,345.6Z"
+        id="path46" />
+     <path
+        class="cls-8"
+        d="M844.819,293.295c5.661,3.268,5.69,8.568.067,11.836L775.242,345.6c-5.619,3.265-14.769,3.265-20.429,0l-70.1-40.472c-5.655-3.265-5.685-8.565-.067-11.83l69.643-40.472c5.624-3.268,14.774-3.268,20.429,0Z"
+        id="path47" />
+   </g>
+ </g>
+  <defs>
+   <!-- Definição do filtro de sombra -->
+   <filter id="box-shadow" x="-50%" y="-50%" width="200%" height="200%">
+     <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"/>
+     <feOffset in="blur" dx="4" dy="5" result="offsetBlur"/>
+     <feFlood flood-color="white" flood-opacity="0.7" result="color"/>
+     <feComposite in2="offsetBlur" operator="in"/>
+     <feMerge>
+       <feMergeNode/>
+       <feMergeNode in="SourceGraphic"/>
+     </feMerge>
+   </filter>
+ </defs>
+ <circle id="bola1" cx="240" cy="300" r="10" fill="white" filter="url(#box-shadow)">
+
+ </circle>
+ <circle id="bola2" cx="240" cy="250" r="10" fill="white" filter="url(#box-shadow)">
+   
+ </circle>
+  <circle id="bola3" cx="240" cy="135" r="10" fill="white" filter="url(#box-shadow)">
+  
+ </circle>
+ 
+ 
+ <metadata
+    id="metadata53">
+   <rdf:RDF>
+     <cc:Work
+        rdf:about="">
+       <dc:title>Jessicasombr583</dc:title>
+     </cc:Work>
+   </rdf:RDF>
+ </metadata>
+</svg>
+
+
+
+<div class="features-container">
+  <div class="features-child">
+    <div class="features-card">
+       <div class="features-card-content">
+      <div class="features-text">
+        <h2 class="features-title">Head start for Doctors</h2>
+        <p class="features-subtitle">AI to give Doctors a critical start on life threatening illness</p>
+      </div>
+      <img src="images/21.png" alt="Icon 1" class="features-icon">
+    </div>
+  </div>
+
+
+    <div class="features-card">  <div class="features-card-content">
+      <div class="features-text">
+        <h2 class="features-title">Head start for Doctors</h2>
+        <p class="features-subtitle">AI to give Doctors a critical start on life threatening illness</p>
+      </div>
+      <img src="images/21.png" alt="Icon 1" class="features-icon">
+    </div></div>
+    <div class="features-card">  <div class="features-card-content">
+      <div class="features-text">
+        <h2 class="features-title">Head start for Doctors</h2>
+        <p class="features-subtitle">AI to give Doctors a critical start on life threatening illness</p>
+      </div>
+      <img src="images/21.png" alt="Icon 1" class="features-icon">
+    </div></div>
+  </div>
+  <div class="features-child">
+    <div class="features-card">  <div class="features-card-content">
+      <div class="features-text">
+        <h2 class="features-title">Head start for Doctors</h2>
+        <p class="features-subtitle">AI to give Doctors a critical start on life threatening illness</p>
+      </div>
+      <img src="images/21.png" alt="Icon 1" class="features-icon">
+    </div></div>
+    <div class="features-card">  <div class="features-card-content">
+      <div class="features-text">
+        <h2 class="features-title">Head start for Doctors</h2>
+        <p class="features-subtitle">AI to give Doctors a critical start on life threatening illness</p>
+      </div>
+      <img src="images/21.png" alt="Icon 1" class="features-icon">
+    </div></div>
+    <div class="features-card">  <div class="features-card-content">
+      <div class="features-text">
+        <h2 class="features-title">Head start for Doctors</h2>
+        <p class="features-subtitle">AI to give Doctors a critical start on life threatening illness</p>
+      </div>
+      <img src="images/21.png" alt="Icon 1" class="features-icon">
+    </div></div>
+  </div>
+</div>
+
+</section>
+
           
        
           
@@ -921,15 +1768,262 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
 
             </section>
 
-         
 
-            
+    
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section>
+<div class="wrapper">
+  <div id="grid-container">
+    <div class="box">
+      <div class="expert-card exp1">
+      <div class="expert-card-content">
+        <h3 class="expert-card-title">Title</h3>
+        <p class="expert-card-subtitle">Subtitle details appear here.</p>
+      </div>
+      </div>
+    </div>
+    
+
+    <div class="box">
+      <div class="expert-card exp2">
+      <div class="expert-card-content">
+        <h3 class="expert-card-title">Title</h3>
+        <p class="expert-card-subtitle">Subtitle details appear here.</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="expert-card exp3">
+      <div class="expert-card-content">
+        <h3 class="expert-card-title">Title</h3>
+        <p class="expert-card-subtitle">Subtitle details appear here.</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="expert-card exp4">
+      <div class="expert-card-content">
+        <h3 class="expert-card-title">Title</h3>
+        <p class="expert-card-subtitle">Subtitle details appear here.</p>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="box">
+      <div class="expert-card exp5">
+      <div class="expert-card-content">
+        <h3 class="expert-card-title">Title</h3>
+        <p class="expert-card-subtitle">Subtitle details appear here.</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="expert-card exp6">
+      <div class="expert-card-content">
+        <h3 class="expert-card-title">Title</h3>
+        <p class="expert-card-subtitle">Subtitle details appear here.</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="expert-card exp7">
+      <div class="expert-card-content">
+        <h3 class="expert-card-title">Title</h3>
+        <p class="expert-card-subtitle">Subtitle details appear here.</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="expert-card exp8">
+      <div class="expert-card-content">
+        <h3 class="expert-card-title">Title</h3>
+        <p class="expert-card-subtitle">Subtitle details appear here.</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="expert-card exp9">
+      <div class="expert-card-content">
+        <h3 class="expert-card-title">Title</h3>
+        <p class="expert-card-subtitle">Subtitle details appear here.</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="expert-card exp10">
+      <div class="expert-card-content">
+        <h3 class="expert-card-title">Title</h3>
+        <p class="expert-card-subtitle">Subtitle details appear here.</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="expert-card exp11">
+      <div class="expert-card-content">
+        <h3 class="expert-card-title">Title</h3>
+        <p class="expert-card-subtitle">Subtitle details appear here.</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="expert-card exp12">
+      <div class="expert-card-content">
+        <h3 class="expert-card-title">Title</h3>
+        <p class="expert-card-subtitle">Subtitle details appear here.</p>
+      </div>
+      </div>
+    </div>
+
+
+
+
+    
+  </div>
+</div>
+
+
+  
+<div class="background-image" id="secondary-container">
+  <img srcset="https://picsum.photos/seed/do/820/580 480w,
+               https://picsum.photos/seed/do/1520/980 800w"
+       sizes="(max-width: 600px) 480px,
+              800px"
+       src="https://picsum.photos/seed/do/820/580"
+       alt="Elva dressed as a fairy" lazyload>
+</div>
+
+
+</section>
+
+
+
+<!--footer1 sec start-->
+<div class="footer"  style= "">
+
+
+  <div class="container">
+      <div class="row footer-container">
+          <div class="col-sm-12 col-lg-4 f-sec1  text-center text-lg-left">
+              <h4 class="high-lighted-heading">About Us</h4>
+              <p>We take our mission of increasing our global access to quality medical models seriously. </p>
+              <a href="#">Read more</a>
+              <h4>Social Network</h4>
+              <div class="s-icons">
+                  <ul class="social-icons-simple">
+                      <li><a href="javascript:void(0)" class="facebook-bg-hvr"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                      <li><a href="javascript:void(0)" class="twitter-bg-hvr"><i class="fab fa-twitter" aria-hidden="true"></i></a> </li>
+                      <li><a href="javascript:void(0)" class="instagram-bg-hvr"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-sm-12 col-lg-5 f-sec2 ">
+              <div class="row">
+                  <div class="col-12 col-md-6">
+                      <h4 class="text-center text-md-left">Information</h4>
+                      <ul class="text-center text-md-left">
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Product</a></li>
+                          <li><a href="#">Privacy Policy</a></li>
+                          <li><a href="#">Terms & Condition</a></li>
+                          <li><a href="#">FAQ</a></li>
+                          <li><a href="shop/contact.html">Contact Us</a></li>
+                          <li><a href="#">Products</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-12 col-md-6">
+                      <h4 class="text-center text-md-left">Experts</h4>
+                      <ul class="text-center text-md-left">
+                          <li><a href="#">Become a partner</a></li>
+                          <li><a href="#">work with us</a></li>
+                          
+                          <li><a href="#">Refund Policy</a></li>
+                          <li><a href="#">Responsive Website</a></li>
+                          <li><a href="#">Subscription</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-12 col-lg-3 f-sec3  text-center text-lg-left">
+              <h4>Our Portfolio</h4>
+              <div class="foot-tag-list">
+                  <span>TheraPredict</span>
+                  <span>pulmoDeep</span>
+                  <span>Neuropredittor</span>
+                  <span>GIOAI</span>
+                  <span>EsoPred</span>
+                  <span>AlzhiNet</span>
+                  <span>H&NSCC-SCOPE</span>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12 footer_notes">
+              <p class="whitecolor text-center w-100 wow fadeInDown">&copy; 2024 DigiBiomics. All rights reserved <a class="web-link" href="http://www.digibiomics.com/" target="_blank">Digibiomics</a></p>
+          </div>
+      </div>
+  </div>
+</div>
+<!--foo0ter1 sec end-->
+
+
+
+
+
+
+ 
+
+
+
+      
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
               </div>
               </div>   
     
 
-
-       
-   
+           
+      
   </body>
   </html>

@@ -1,6 +1,23 @@
 import { Pane } from 'https://cdn.skypack.dev/tweakpane'
 import Splitting from 'https://cdn.skypack.dev/splitting'
 
+
+
+
+
+
+
+
+
+document.querySelector('.menu').addEventListener('click', function() {
+  document.querySelector('.header__nav').classList.toggle('active');
+});
+
+
+
+
+
+
 const result = Splitting()
 document.documentElement.style.setProperty(
   '--char-total',
@@ -171,23 +188,25 @@ tl.fromTo(
     const pulses = gsap.timeline({
       defaults: {
         //  scale: 2,
-        autoAlpha: 1,
+        autoAlpha: 0,
+
         transformOrigin: 'center',
         ease: "elastic(2.5, 1)",
       }
     })
-    .from(".text01", { autoAlpha: 1, duration: 1, ease: "none" }, 0) // Initial fade-in of text01
+    .from(".text01", { autoAlpha: 1, duration: 1, ease: "none" , x: -1800,  }, 0)
+    .from(".cardimage", { autoAlpha: 1, duration: 1, ease: "none" , x: 1200,  }, 0) // Initial fade-in of text01
   .to(".ball02", { autoAlpha: 1, duration: 0.5 ,scale: 2}, 0.93) // ball02 and text01 appear
 
   // Text01 fades out as pro fades in when ball03 appears
   .to(".ball03", { autoAlpha: 1, duration: 0.5, scale: 2 }, 1.93) // ball03 appears
-  .fromTo(".text01", { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.5 }, 1.93) // text01 fades out
-  .fromTo(".pro", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, 1.93) // pro fades in
+  .fromTo(".text01, .cardimage", { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.5 }, 1.93) // text01 fades out
+  .fromTo(".pro , .cardimage2", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, 1.93) // pro fades in
 
   // pro fades out as proo fades in when ball04 appears
   .to(".ball04", { autoAlpha: 1, duration: 0.5 , scale: 2}, 3.01) // ball04 appears
-  .fromTo(".pro", { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.5 }, 3.01) // pro fades out
-  .fromTo(".proo", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, 3.01); // proo fades in
+  .fromTo(".pro , .cardimage2", { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.5 }, 3.01) // pro fades out
+  .fromTo(".proo  , .cardimage3", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5 }, 3.01); // proo fades in
   
     ;
 
@@ -330,26 +349,24 @@ tl.fromTo(
 
 
 
-    gsap.fromTo(".wcard-subtitle", 
-      { opacity: 1 ,scale: 1, rotate: 0, y: 0}, // Start with full visibility
-  {
-    opacity: 0, // Fade out to 0 opacity
-    duration: 1,
-    scrollTrigger: {
-      trigger: ".wcard",
-      start: "center center",
-      scrub: true, // Enables smooth transition based on scroll position
-      onEnter: () => {
-        // Change the subtitle content when the animation triggers
-        document.querySelector('.wcard-subtitle').textContent = "Discover our revolutionary through advanced algorithmsprediction Personalized  system by DigiBiomics. Enhances treatment outcomes  system.";
-      },
-      onLeaveBack: () => {
-        // Revert to original subtitle when scrolling back up
-        document.querySelector('.wcard-subtitle').textContent = "Personalized antidepressant therapy prediction system by DigiBiomics. Enhances treatment outcomes through advanced algorithms.";
+    gsap.to(".wcard-flip", {
+      scrollTrigger: {
+        trigger: ".wcard-flip",
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+        onEnter: () => {
+          // Add the class to trigger the flip
+          document.querySelector(".wcard-flip").classList.add("flip-active");
+        },
+        onLeaveBack: () => {
+          // Remove the class to reverse the flip
+          document.querySelector(".wcard-flip").classList.remove("flip-active");
+        }
       }
-    }
-  }
-);
+    });
+    
+    
 
 gsap.fromTo(".contactus-card", 
   { opacity: 0 ,scale: 0.1, rotate: 0, y: 50}, // Start with full visibility
@@ -368,3 +385,186 @@ scrollTrigger: {
 }
 );
 
+
+
+
+
+
+
+
+
+let ball1 = gsap.timeline({ repeat: -1})
+let ball2 = gsap.timeline({ repeat: -1})
+let ball3 = gsap.timeline({ repeat: -1})
+ball1.to('#bola1', { x: 157, duration: 0.9, ease: "none"  }  )
+        .to('#bola1', { x:170,y: -80 , duration: 0.9, ease: "none" })
+        .to('#bola1', { x: 355 , duration: 1, ease: "none" })
+        .to('#bola1', { x: 360, y: -50 , duration: 0.5, ease: "none" })
+        .to('#bola1', { x: 365, y:-47, duration: 0.2, ease: "none" })
+        .to('#bola1', { x: 450, duration: 0.9, ease: "none" })
+
+
+ball2.to('#bola2', { x: 150, duration: 0.7, ease: "none",  }  )
+.to('#bola2', { x: 155, y:-30, duration: 0.5, ease: "none",  }  )
+.to('#bola2', { x: 333, duration: 0.9, ease: "none",  }  )
+.to('#bola2', { x: 350, y:-110, duration: 0.6, ease: "none",  }  )
+.to('#bola2', { x: 450, y:-111, duration: 0.9, ease: "none",  }  )
+
+ball3.to('#bola3', { x: 152, duration: 0.9, ease: "none",  }  ).to('#bola3', { x: 165,y:80, duration: 0.7, ease: "none",  }  ).to('#bola3', { x: 330, duration: 0.6, ease: "none",  }  )
+.to('#bola3', { x: 350,y:165, duration: 0.7, ease: "none",  } ).to('#bola3', { x: 450, duration: 0.9, ease: "none",  }  )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//features
+
+
+$('.features-item').on('click', function() {
+  var $this = $(this);
+  var imgsrc = $this.attr('data-src');
+  
+  $('.features-image img').attr('src', imgsrc);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+const tl3 = gsap.from('.box', {
+  duration: 1.5, 
+  stagger: 0.75,
+  yPercent: 100, 
+  opacity: 0
+})
+
+ScrollTrigger.create({
+  animation: tl3,
+  trigger: '.wrapper',
+  // markers: true,
+  start: 'top top',
+  end: "bottom bottom",
+  scrub: 1,
+  pin: '.wrapper',
+  // pinSpacing: false
+})
+
+
+
+document.querySelectorAll('.question-container').forEach(function(question) {
+  question.addEventListener('click', function() {
+    // Remove active class and reset icons from all questions
+    document.querySelectorAll('.question-container').forEach(function(q) {
+      q.classList.remove('active');
+      var icon = q.querySelector('.question-icon');
+      icon.src = q.getAttribute('data-icon'); // Reset to default icon
+    });
+    
+    // Hide all answers
+    document.querySelectorAll('.right-innerr-container').forEach(function(answer) {
+      answer.classList.remove('active');
+    });
+
+    // Get the corresponding answer element
+    var answerId = this.getAttribute('data-answer');
+    var answerElement = document.getElementById(answerId);
+
+    // Show the corresponding answer
+    if (answerElement) {
+      answerElement.classList.add('active');
+    }
+
+    // Activate the clicked question and update its icon
+    this.classList.add('active');
+    var icon = this.querySelector('.question-icon');
+    icon.src = this.getAttribute('data-active-icon'); // Set to active icon
+  });
+});
+
+
+
+
+
+
+
+
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach((counter) => {
+  counter.innerText = "0";
+  const updateCounter = () => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
+    const increment = target / 200;
+    if (count < target) {
+      counter.innerText = `${Math.ceil(count + increment)}`;
+      setTimeout(updateCounter, 1);
+    } else counter.innerText = target;
+  };
+  updateCounter();
+});
+
+
+
+
+const featuresCards = document.querySelectorAll(".features-card");
+
+    // Loop through each card to apply animation
+    featuresCards.forEach((card, index) => {
+      gsap.fromTo(
+        card,
+        {
+          // Initial state
+          opacity: 0,
+          scale: 0.5,
+          xPercent: -100,
+          yPercent: -100,
+          rotateZ: 0,
+        },
+        {
+          // Animated state
+          opacity: 1,
+          scale: 1,
+          xPercent: 0,
+          yPercent: 0,
+          rotateZ: 360, // Rotate the card along Z-axis
+          duration: 2,
+          ease: "power1.out",
+          scrollTrigger: {
+            trigger: ".features-container",
+            start: "top 90%", // Animation starts when card enters 80% of the viewport
+            end: "bottom 90%", // Animation ends when card leaves 20% of the viewport
+            scrub: true, // Sync animation with the scrollbar
+            // markers: true, // Remove or set to false in production
+          },
+        }
+      );
+    });
