@@ -10,6 +10,22 @@
   outline: 1px solid #f00 !important;
 } */
 
+@media (min-width: 768px) {
+.mobile {
+
+  display: none;
+}
+}
+
+
+@media (max-width: 768px) {
+  .desktop {
+
+    display: none;
+  }
+
+  
+}
 
 
 
@@ -395,7 +411,8 @@ margin-left: 10px;
 
   .headerr {
 
-    padding: 10px 10px;
+    padding: 0px 30px;
+
 
   }
 
@@ -552,6 +569,7 @@ margin-left: 10px;
   gap: 8px;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
 }
 
 .button-text {
@@ -584,6 +602,11 @@ margin-left: 10px;
   }
 }
 
+
+
+.button:hover {
+  background: #cdc5ff;
+}
 
 .email-container {
   display: flex;
@@ -703,6 +726,7 @@ html {
 
 header img {
   position: absolute;
+  margin-top: 10px;
   top: 10px;
   z-index: 1;
   right: 0;
@@ -1207,7 +1231,7 @@ section.what {
 .what-description {
 
   max-width: 500px;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 
@@ -1240,7 +1264,8 @@ section.what {
 @media (max-width: 768px) {
 
   .what-card-title {
-    top: 20px;
+    font-size: 1.4rem;
+    top: 0px;
   }
 
   .image-div {
@@ -1283,7 +1308,7 @@ section.what {
   /* Responsive width using vw */
   min-height: 20vh;
   /* Responsive height using vh */
-  height: 30vh;
+  /* height: 30vh; */
   position: relative;
   background: rgba(255, 255, 255, 0.10);
   border-radius: 2rem;
@@ -1298,7 +1323,7 @@ section.what {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  flex: 1 1 45%;
+  /* flex: 1 1 45%; */
 }
 
 .what-card-icon {
@@ -1342,7 +1367,7 @@ section.what {
 .what-card-text {
   width: 95%;
   /* Flexible width for the text container */
-  position: absolute;
+  position: relative;
   /* Adjust position using vw for responsiveness */
 }
 
@@ -1379,7 +1404,7 @@ section.what {
   .what-card {
     width: 80vw;
     /* Adjust width for smaller screens */
-    height: 30vh;
+    /* height: 30vh; */
     /* Adjust height for smaller screens */
   }
 
@@ -1427,7 +1452,7 @@ section.what {
   .what-card {
     width: 90vw;
     /* Further adjust width for mobile screens */
-    height: 20vh;
+    /* height: 20vh; */
     /* Allow flexible height */
     padding: 4vh 4vw;
     /* Adjust padding */
@@ -2065,6 +2090,27 @@ div.tp-dfwv {
 }
 
 
+
+@media (max-width: 768px) {
+  .cardsvg1 {
+
+
+   
+    width: 80px;
+  }
+  
+
+  .cardsvg2 {
+
+
+    position: absolute;
+    right: -30px;
+    top: 50px;
+    z-index: 2;
+    width: 60px;
+  }
+  
+}
 
 
 
@@ -3524,7 +3570,7 @@ section.faq {
 
 /* Content section */
 .pub-card-content {
-  margin-top: 2rem; /* 32px equivalent */
+  margin-top: 0.5rem; /* 32px equivalent */
   color: #605880;
   font-size: 0.976rem; /* 15.62px equivalent */
   font-family: 'Inter', sans-serif;
@@ -3552,10 +3598,11 @@ section.faq {
 
   .pub-icon {
     width: 1.857rem; /* 29.71px equivalent */
-    height: 2.1875rem; /* 35px equivalent */
+    height: 1.875rem; /* 35px equivalent */
   }
 
   .pub-card-content {
+    margin-top: 0.5rem;
     font-size: 0.488rem; /* 7.81px equivalent */
     line-height: 1.2165; /* Adjusted line height */
   }
@@ -3741,6 +3788,10 @@ section.faq {
 
   background-color: #000;
 }
+
+
+
+
 
 
 .gs-dev-tools {
