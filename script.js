@@ -459,38 +459,40 @@ $('.features-item').on('click', function() {
 
 
 
-
 document.querySelectorAll('.question-container').forEach(function(question) {
   question.addEventListener('click', function() {
+    // Check if the clicked question is already active
+    const isActive = this.classList.contains('active');
+
     // Remove active class and reset icons from all questions
     document.querySelectorAll('.question-container').forEach(function(q) {
       q.classList.remove('active');
       var icon = q.querySelector('.question-icon');
       icon.src = q.getAttribute('data-icon'); // Reset to default icon
     });
-    
+
     // Hide all answers
     document.querySelectorAll('.right-innerr-container').forEach(function(answer) {
       answer.classList.remove('active');
     });
 
-    // Get the corresponding answer element
-    var answerId = this.getAttribute('data-answer');
-    var answerElement = document.getElementById(answerId);
+    if (!isActive) {  // Only proceed to show if the clicked question wasn't already active
+      // Get the corresponding answer element
+      var answerId = this.getAttribute('data-answer');
+      var answerElement = document.getElementById(answerId);
 
-    // Show the corresponding answer
-    if (answerElement) {
-      answerElement.classList.add('active');
+      // Show the corresponding answer
+      if (answerElement) {
+        answerElement.classList.add('active');
+      }
+
+      // Activate the clicked question and update its icon
+      this.classList.add('active');
+      var icon = this.querySelector('.question-icon');
+      icon.src = this.getAttribute('data-active-icon'); // Set to active icon
     }
-
-    // Activate the clicked question and update its icon
-    this.classList.add('active');
-    var icon = this.querySelector('.question-icon');
-    icon.src = this.getAttribute('data-active-icon'); // Set to active icon
   });
 });
-
-
 
 
 
@@ -526,7 +528,7 @@ const tl3 = gsap.from('.box', {
 ScrollTrigger.create({
   animation: tl3,
   trigger: '.wrapper',
-   markers: true,
+   //markers: true,
   start: 'top center',
   end: "bottom bottom",
   scrub: 1,
@@ -594,3 +596,11 @@ ScrollTrigger.create({
   scrub: true, // Sync animation with the scrollbar
   // markers: true, // Uncomment to see markers in production
 });
+
+
+
+
+
+
+
+
