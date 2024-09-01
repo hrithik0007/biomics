@@ -16,8 +16,6 @@ document.querySelector('.menu').addEventListener('click', function() {
 
 
 
-
-
 const result = Splitting()
 document.documentElement.style.setProperty(
   '--char-total',
@@ -342,17 +340,17 @@ tl.fromTo(
           yPercent: (_, i) => (i + 1) * 40 + i * 100
         }, "start");
     
-      // Scale animation
-      gsap.from(".smooth-sec-two", {
-        scale: 0.25,
-        scrollTrigger: {
-          trigger: ".smooth-sec-two",
-          scrub: true,
-          start: "top bottom",
-          end: "top top",
-          // markers: true,
-        }
-      });
+      // // Scale animation
+      // gsap.from(".smooth-sec-two", {
+      //   scale: 0.25,
+      //   scrollTrigger: {
+      //     trigger: ".smooth-sec-two",
+      //     scrub: true,
+      //     start: "top bottom",
+      //     end: "top top",
+      //     // markers: true,
+      //   }
+      // });
     
     //  
     
@@ -427,23 +425,23 @@ ball3.to('#bola3', { x: 152, duration: 0.9, ease: "none",  }  ).to('#bola3', { x
 
 
 
-const tl3 = gsap.from('.box', {
-  duration: 1.5, 
-  stagger: 0.75,
-  yPercent: 100, 
-  opacity: 0
-})
+// const tl3 = gsap.from('.box', {
+//   duration: 1.5, 
+//   stagger: 0.75,
+//   yPercent: 100, 
+//   opacity: 0
+// })
 
-ScrollTrigger.create({
-  animation: tl3,
-  trigger: '.wrapper',
-   //markers: true,
-  start: 'top center',
-  end: "bottom bottom",
-  scrub: 1,
-  pin: '.wrapper',
-  // pinSpacing: false
-})
+// ScrollTrigger.create({
+//   animation: tl3,
+//   trigger: '.wrapper',
+//    //markers: true,
+//   start: 'top center',
+//   end: "bottom bottom",
+//   scrub: 1,
+//   pin: '.wrapper',
+//   // pinSpacing: false
+// })
 
 
     const tl4 = gsap.fromTo(
@@ -576,70 +574,6 @@ document.querySelectorAll('.question-container').forEach(function(question) {
 });
 
 
-(function() {
-  var d = document,
-      accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
-      setAriaAttr,
-      setAccordionAria,
-      switchAccordion,
-      touchSupported = ('ontouchstart' in window),
-      pointerSupported = ('pointerdown' in window);
-  
-  skipClickDelay = function(e) {
-      e.preventDefault();
-      e.target.click();
-  };
-
-  setAriaAttr = function(el, ariaType, newProperty) {
-      el.setAttribute(ariaType, newProperty);
-  };
-  
-  setAccordionAria = function(el1, el2, expanded) {
-      switch (expanded) {
-          case "true":
-              setAriaAttr(el1, 'aria-expanded', 'true');
-              setAriaAttr(el2, 'aria-hidden', 'false');
-              break;
-          case "false":
-              setAriaAttr(el1, 'aria-expanded', 'false');
-              setAriaAttr(el2, 'aria-hidden', 'true');
-              break;
-          default:
-              break;
-      }
-  };
-
-  switchAccordion = function(e) {
-      console.log("triggered");
-      e.preventDefault();
-      var thisAnswer = e.target.parentNode.nextElementSibling;
-      var thisQuestion = e.target;
-      if (thisAnswer.classList.contains('is-collapsed')) {
-          setAccordionAria(thisQuestion, thisAnswer, 'true');
-      } else {
-          setAccordionAria(thisQuestion, thisAnswer, 'false');
-      }
-      thisQuestion.classList.toggle('is-collapsed');
-      thisQuestion.classList.toggle('is-expanded');
-      thisAnswer.classList.toggle('is-collapsed');
-      thisAnswer.classList.toggle('is-expanded');
-      thisAnswer.classList.toggle('animateIn');
-  };
-
-  for (var i = 0, len = accordionToggles.length; i < len; i++) {
-      if (touchSupported) {
-          accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
-      }
-      if (pointerSupported) {
-          accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
-      }
-      accordionToggles[i].addEventListener('click', switchAccordion, false);
-  }
-})();
-
-
-
-
 
 
 
@@ -660,7 +594,6 @@ counters.forEach((counter) => {
   };
   updateCounter();
 });
-
 
 
 

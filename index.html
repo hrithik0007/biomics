@@ -20,13 +20,15 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
       <link rel="stylesheet" href="vendor/css/bundle.min.css">
       <link rel="stylesheet" href="vendor/css/LineIcons.min.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
       <!-- Plugin Css -->
 
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></link>
 
-     
+      <link rel="stylesheet" type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
        <!-- Link to an external stylesheet -->
   </head>
   <body>
@@ -59,7 +61,11 @@
 
    
    
-
+   
+		<!-- ===================================================
+				Loading Transition
+			==================================================== -->
+		
   
     
    <a
@@ -239,7 +245,16 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
     </main>
 
 
-    
+    <div id="preloader">
+			<div id="ctn-preloader" class="ctn-preloader">
+				<div class="icon"><img src="images/icon.png" alt="" class="m-auto d-block" width="100"></div>
+				<div class="txt-loading">
+					<span data-text-preloader="DigiBiomics" class="letters-loading">
+						DigiBiomics
+					</span>
+				</div>
+			</div>
+		</div>
    
 
     <section class = " what">
@@ -1904,7 +1919,7 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
                 
                   <div class="wrap wrap--3">
                     <div class="xcontainer xcontainer--3">
-                      <div class="xcard-content">
+                      <div class="xcard-content " >
                         <img class="xcard-img" src="https://digibiomics.com/images/media/christoph-licht.jpg">
                       <h3>Dr. Christoph Licht</h3>
                     <p>MD, FRCP(C), FASN, University of Toronto, Canada</p></div>
@@ -2019,10 +2034,29 @@ Innovative medical data pipelines covering historical, myriad, unstructured data
 
               </div>
               </div>   
-    
+              <script src="vendor/jquery.min.js"></script>
 
+              
+		<!-- Bootstrap JS -->
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!-- WOW js -->
+		<script src="vendor/wow/wow.min.js"></script>
+		<!-- Slick Slider -->
+		<script src="vendor/slick/slick.min.js"></script>
+		<!-- Fancybox -->
+		<script src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+		<!-- Lazy -->
+		<script src="vendor/jquery.lazy.min.js"></script>
+		<!-- js Counter -->
+		<script src="vendor/jquery.counterup.min.js"></script>
+		<script src="vendor/jquery.waypoints.min.js"></script>
+
+		<!-- validator js -->
+		<script src="vendor/validator.js"></script>
            <script>
-            
+
+
+        
 class parallaxTiltEffect {
 
 constructor({element, tiltEffect}) {
@@ -2119,6 +2153,32 @@ tiltEffect: 'normal'
 const wrap4 = new parallaxTiltEffect({
 element: $('.wrap--4'),
 tiltEffect: 'normal'
+});
+
+
+
+
+
+window.addEventListener("load", function() {
+    var preloader = document.getElementById("preloader");
+    var minimumLoadTime = 2000; // Minimum duration in milliseconds (e.g., 2000ms = 2 seconds)
+    
+    var startTime = Date.now();
+
+    function hidePreloader() {
+        var elapsedTime = Date.now() - startTime;
+        var remainingTime = minimumLoadTime - elapsedTime;
+
+        if (remainingTime > 0) {
+            setTimeout(function() {
+                preloader.style.display = "none";
+            }, remainingTime);
+        } else {
+            preloader.style.display = "none";
+        }
+    }
+
+    hidePreloader();
 });
 
 
