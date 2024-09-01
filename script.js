@@ -251,6 +251,18 @@ tl.fromTo(
 
 
 
+    gsap.from(".doctor", {
+      x: 800,
+      scrollTrigger: {
+        trigger: ".contactus-card2",
+        start: "top bottom",
+        end: "bottom 70%",
+        scrub: true,
+        //markers: true,
+      }
+    });
+    
+
 
 
 
@@ -415,109 +427,6 @@ ball3.to('#bola3', { x: 152, duration: 0.9, ease: "none",  }  ).to('#bola3', { x
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//features
-
-
-$('.features-item').on('click', function() {
-  var $this = $(this);
-  var imgsrc = $this.attr('data-src');
-  
-  $('.features-image img').attr('src', imgsrc);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.querySelectorAll('.question-container').forEach(function(question) {
-  question.addEventListener('click', function() {
-    // Check if the clicked question is already active
-    const isActive = this.classList.contains('active');
-
-    // Remove active class and reset icons from all questions
-    document.querySelectorAll('.question-container').forEach(function(q) {
-      q.classList.remove('active');
-      var icon = q.querySelector('.question-icon');
-      icon.src = q.getAttribute('data-icon'); // Reset to default icon
-    });
-
-    // Hide all answers
-    document.querySelectorAll('.right-innerr-container').forEach(function(answer) {
-      answer.classList.remove('active');
-    });
-
-    if (!isActive) {  // Only proceed to show if the clicked question wasn't already active
-      // Get the corresponding answer element
-      var answerId = this.getAttribute('data-answer');
-      var answerElement = document.getElementById(answerId);
-
-      // Show the corresponding answer
-      if (answerElement) {
-        answerElement.classList.add('active');
-      }
-
-      // Activate the clicked question and update its icon
-      this.classList.add('active');
-      var icon = this.querySelector('.question-icon');
-      icon.src = this.getAttribute('data-active-icon'); // Set to active icon
-    }
-  });
-});
-
-
-
-
-
-
-
-const counters = document.querySelectorAll(".counter");
-
-counters.forEach((counter) => {
-  counter.innerText = "0";
-  const updateCounter = () => {
-    const target = +counter.getAttribute("data-target");
-    const count = +counter.innerText;
-    const increment = target / 200;
-    if (count < target) {
-      counter.innerText = `${Math.ceil(count + increment)}`;
-      setTimeout(updateCounter, 1);
-    } else counter.innerText = target;
-  };
-  updateCounter();
-});
-
-
-
 const tl3 = gsap.from('.box', {
   duration: 1.5, 
   stagger: 0.75,
@@ -596,6 +505,162 @@ ScrollTrigger.create({
   scrub: true, // Sync animation with the scrollbar
   // markers: true, // Uncomment to see markers in production
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.querySelectorAll('.question-container').forEach(function(question) {
+  question.addEventListener('click', function() {
+    // Check if the clicked question is already active
+    const isActive = this.classList.contains('active');
+
+    // Remove active class and reset icons from all questions
+    document.querySelectorAll('.question-container').forEach(function(q) {
+      q.classList.remove('active');
+      var icon = q.querySelector('.question-icon');
+      icon.src = q.getAttribute('data-icon'); // Reset to default icon
+    });
+
+    // Hide all answers
+    document.querySelectorAll('.right-innerr-container').forEach(function(answer) {
+      answer.classList.remove('active');
+    });
+
+    if (!isActive) {  // Only proceed to show if the clicked question wasn't already active
+      // Get the corresponding answer element
+      var answerId = this.getAttribute('data-answer');
+      var answerElement = document.getElementById(answerId);
+
+      // Show the corresponding answer
+      if (answerElement) {
+        answerElement.classList.add('active');
+      }
+
+      // Activate the clicked question and update its icon
+      this.classList.add('active');
+      var icon = this.querySelector('.question-icon');
+      icon.src = this.getAttribute('data-active-icon'); // Set to active icon
+    }
+  });
+});
+
+
+(function() {
+  var d = document,
+      accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+      setAriaAttr,
+      setAccordionAria,
+      switchAccordion,
+      touchSupported = ('ontouchstart' in window),
+      pointerSupported = ('pointerdown' in window);
+  
+  skipClickDelay = function(e) {
+      e.preventDefault();
+      e.target.click();
+  };
+
+  setAriaAttr = function(el, ariaType, newProperty) {
+      el.setAttribute(ariaType, newProperty);
+  };
+  
+  setAccordionAria = function(el1, el2, expanded) {
+      switch (expanded) {
+          case "true":
+              setAriaAttr(el1, 'aria-expanded', 'true');
+              setAriaAttr(el2, 'aria-hidden', 'false');
+              break;
+          case "false":
+              setAriaAttr(el1, 'aria-expanded', 'false');
+              setAriaAttr(el2, 'aria-hidden', 'true');
+              break;
+          default:
+              break;
+      }
+  };
+
+  switchAccordion = function(e) {
+      console.log("triggered");
+      e.preventDefault();
+      var thisAnswer = e.target.parentNode.nextElementSibling;
+      var thisQuestion = e.target;
+      if (thisAnswer.classList.contains('is-collapsed')) {
+          setAccordionAria(thisQuestion, thisAnswer, 'true');
+      } else {
+          setAccordionAria(thisQuestion, thisAnswer, 'false');
+      }
+      thisQuestion.classList.toggle('is-collapsed');
+      thisQuestion.classList.toggle('is-expanded');
+      thisAnswer.classList.toggle('is-collapsed');
+      thisAnswer.classList.toggle('is-expanded');
+      thisAnswer.classList.toggle('animateIn');
+  };
+
+  for (var i = 0, len = accordionToggles.length; i < len; i++) {
+      if (touchSupported) {
+          accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+      }
+      if (pointerSupported) {
+          accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+      }
+      accordionToggles[i].addEventListener('click', switchAccordion, false);
+  }
+})();
+
+
+
+
+
+
+
+
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach((counter) => {
+  counter.innerText = "0";
+  const updateCounter = () => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
+    const increment = target / 200;
+    if (count < target) {
+      counter.innerText = `${Math.ceil(count + increment)}`;
+      setTimeout(updateCounter, 1);
+    } else counter.innerText = target;
+  };
+  updateCounter();
+});
+
 
 
 
