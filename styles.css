@@ -481,7 +481,7 @@ z-index: 2;
     position: absolute;
     top: 60px;
     /* Adjust based on your header height */
-   
+    left:10px;
     background-color: #ffffff;
     text-align: start;
     align-items: start;
@@ -595,7 +595,7 @@ z-index: 2;
   .hlogo {
 
     width: 120px;
-    height: 30px;
+    height: 40px;
 
 
 
@@ -5278,12 +5278,14 @@ ul {
 
 
   .xcontainer {
-    width: 200px;
+    width: 180px;
     height: 300px;
     padding: 1rem;
     
   }
-
+  .wrap {
+    margin: 1rem;
+  }
   .xcard-img {
     width: 100px;
     height: 100px;
