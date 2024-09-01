@@ -397,13 +397,13 @@ z-index: 2;
     flex-direction: column;
     width: 100vw;
     position: absolute;
-    top: 80px;
+    top: 60px;
     /* Adjust based on your header height */
-    left: 0;
+   
     background-color: #ffffff;
     text-align: start;
     align-items: start;
-
+     
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 9;
     /* Make sure it appears above other content */
