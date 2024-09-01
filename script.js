@@ -152,10 +152,9 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".what", // The section that triggers the animation
     scrub: true,
-    start: "top 10%",
-    end: "bottom top",  // Animation ends before the `.products` section starts
-    pin: true,          // Pin the `.what` section during the animation
-    pinSpacing: true,  // Avoid additional spacing after pinning
+    start: "top center",
+    end: "center center",  // Animation ends before the `.products` section starts
+   
     //markers: true, 
   },
 });
@@ -177,7 +176,7 @@ tl.fromTo(
   )
 
 
-
+  
 
 
 
@@ -528,7 +527,7 @@ ScrollTrigger.create({
   animation: tl3,
   trigger: '.wrapper',
    markers: true,
-  start: 'top top',
+  start: 'top center',
   end: "bottom bottom",
   scrub: 1,
   pin: '.wrapper',
