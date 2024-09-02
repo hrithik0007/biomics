@@ -78,7 +78,25 @@
     img {
       width: 100%;
     }
+    .atitle {
+      color: var(--primary);
+      font-size: 70px;
+      line-height: 98px;
+      font-family: 'Libre Baskerville', serif;
+      padding-top: 60px;
+      padding-bottom: 40px;
+      width: 90%;
+      background-color: transparent;
+      margin: 40px auto;
+      overflow: hidden;
+      box-sizing: border-box;
+      font-kerning: none;
+    }
 
+    .atitle span {
+      color: var(--secondary);
+      overflow: hidden;
+    }
 
 
     .acard-heading {
@@ -226,6 +244,13 @@ word-wrap: break-word;
 
     @media screen and (max-width: 1025px) {
       .title {
+        font-size: 40px;
+        line-height: 74px;
+        padding-left: 40px;
+      }
+
+
+      .atitle {
         font-size: 60px;
         line-height: 74px;
         padding-left: 40px;
@@ -288,6 +313,10 @@ word-wrap: break-word;
 
     @media screen and (max-width: 640px) {
       .title {
+        font-size: 24px;
+        line-height: 61px;
+      }
+      .atitle {
         font-size: 44px;
         line-height: 61px;
       }
@@ -349,6 +378,11 @@ word-wrap: break-word;
 
     @media screen and (max-width: 540px) {
       .title {
+        font-size: 34px;
+        line-height: 51px;
+        padding-left: 0px;
+      }
+      .atitle {
         font-size: 34px;
         line-height: 51px;
         padding-left: 0px;
@@ -516,7 +550,7 @@ font-size: 1.0rem;
 
 
   <section>
-    <div class="title titleGreathorned" style ="font-size: 70px;line-height: 90px;"><span>DigiBiomics® Harness The Power Of AI And ML </span>
+    <div class="atitle titleGreathorned" ><span>DigiBiomics® Harness The Power Of AI And ML </span>
         To Tackle Three Crucial Domains That Are Of Utmost Importance To Humanity Today: Health,
         Agriculture, And Climate Change
     </div>
