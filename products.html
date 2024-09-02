@@ -22,8 +22,10 @@
       <link rel="stylesheet" href="vendor/css/LineIcons.min.css">
       <!-- Plugin Css -->
 
+      <script src="https://404043.hstgr.cloud/basedev/librarys/gsap/SplitText.min.js"></script>
 
-
+      <script src="https://404043.hstgr.cloud/basedev/librarys/gsap/TextPlugin.min.js"></script>
+     
 
      
        <!-- Link to an external stylesheet -->
@@ -33,59 +35,336 @@
     <script type="module" src="script.js"></script> 
   
     
-    <a
-     
-    <svg
-      class="w-9"
-      viewBox="0 0 969 955"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        cx="161.191"
-        cy="320.191"
-        r="133.191"
-        stroke="currentColor"
-        stroke-width="20"
-      ></circle>
-      <circle
-        cx="806.809"
-        cy="320.191"
-        r="133.191"
-        stroke="currentColor"
-        stroke-width="20"
-      ></circle>
-      <circle
-        cx="695.019"
-        cy="587.733"
-        r="31.4016"
-        fill="currentColor"
-      ></circle>
-      <circle
-        cx="272.981"
-        cy="587.733"
-        r="31.4016"
-        fill="currentColor"
-      ></circle>
-      <path
-        d="M564.388 712.083C564.388 743.994 526.035 779.911 483.372 779.911C440.709 779.911 402.356 743.994 402.356 712.083C402.356 680.173 440.709 664.353 483.372 664.353C526.035 664.353 564.388 680.173 564.388 712.083Z"
-        fill="currentColor"
-      ></path>
-      <rect
-        x="210.42"
-        y="448.31"
-        width="343.468"
-        height="51.4986"
-        fill="#FF1E1E"
-      ></rect>
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M745.643 288.24C815.368 344.185 854.539 432.623 854.539 511.741H614.938V454.652C614.938 433.113 597.477 415.652 575.938 415.652H388.37C366.831 415.652 349.37 433.113 349.37 454.652V511.741L110.949 511.741C110.949 432.623 150.12 344.185 219.845 288.24C289.57 232.295 384.138 200.865 482.744 200.865C581.35 200.865 675.918 232.295 745.643 288.24Z"
-        fill="currentColor"
-      ></path>
-    </svg>
-  </a>
+    <style>
+
+
+
+      .title {
+        color: var(--background);
+        font-size: 40px;
+        line-height: 68px;
+        font-family: 'Libre Baskerville', serif;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        width: 90%;
+        background-color: transparent;
+        margin: 40px auto;
+        overflow: hidden;
+        box-sizing: border-box;
+        font-kerning: none;
+      }
+  
+      .title span {
+        color: var(--background);
+        overflow: hidden;
+      }
+  
+      
+      section {
+        width: 100vw;
+        
+        margin: 0 auto;
+      }
+  
+      .cluster {
+        position: relative;
+        width: 100%;
+        max-width: 874px;
+        height: 792px;
+        margin: 100px auto;
+        background-color: transparent;
+        padding-bottom: 100px;
+      }
+  
+      .clusterPieces {
+        position: absolute;
+      }
+  
+      .circle {
+        width: 100%;
+        max-width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        background-color: var(--primary);
+        left: 30vh;
+        bottom: 20vh;
+        z-index: 1;
+      }
+  
+      .dotsBlue {
+        width: 100%;
+        height: auto;
+        max-width: 494px;
+        max-height: 434px;
+        z-index: 3;
+        left: 0;
+        top: 10vh;
+      }
+  
+      .owlHorned {
+        width: 100%;
+        height: auto;
+        max-width: 450px;
+        max-height: 700px;
+        top: 0;
+        right: 0;
+        z-index: 2;
+      }
+  
+      .caption {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        color: var(--primary);
+        text-align: right;
+      }
+  
+      .caption span {
+        color: #ffffff;
+      }
+  
+      #wrappie {
+        width: 960px;
+        height: 792px;
+        margin: 0 auto;
+      }
+  
+  
+      .dotsWhite {
+        width: 100%;
+        height: auto;
+        max-width: 310px;
+        max-height: 588px;
+        z-index: 2;
+        left: 0;
+        top: 400px;
+      }
+  
+      .owlBurrowing {
+        width: 100%;
+        height: auto;
+        max-width: 674px;
+        max-height: 700px;
+        top: 162px;
+        right: 0;
+        z-index: 1;
+      }
+  
+      .triangle {
+        width: 100%;
+        max-width: 448px;
+        height: 446px;
+        left: -28px;
+        top: 0;
+        z-index: 3;
+      }
+  
+      .clusterBurrowing {
+        max-width: 874px;
+        height: 996px;
+      }
+  
+      .captionBurrowing {}
+  
+      .spcr300 {
+        padding-bottom: 300px;
+      }
+  
+  
+      @media screen and (max-width: 1025px) {
+        .title {
+          font-size: 60px;
+          line-height: 74px;
+          padding-left: 40px;
+        }
+  
+        .cluster {
+          max-width: 600px;
+          height: 550px;
+          margin: 20px auto;
+        }
+  
+        .dotsBlue {
+          max-width: 340px;
+          left: 0;
+          top: 56px;
+        }
+  
+        .owlHorned {
+          max-width: 310px;
+        }
+  
+        .circle {
+          max-width: 246px;
+          height: 246px;
+          left: 146px;
+          top: 300px;
+        }
+  
+        .caption {
+          bottom: 38px;
+          right: 0;
+        }
+  
+        .clusterBurrowing {
+          max-width: 600px;
+          height: 678px;
+        }
+  
+        .dotsWhite {
+          max-width: 216px;
+          left: 0;
+          top: 275px;
+        }
+  
+        .owlBurrowing {
+          max-width: 460px;
+          top: 112px;
+        }
+  
+        .triangle {
+          max-width: 307px;
+          height: 304px;
+          left: -14px;
+        }
+  
+        .captionBurrowing {
+          top: 605px;
+        }
+      }
+  
+      @media screen and (max-width: 640px) {
+        .title {
+          font-size: 44px;
+          line-height: 61px;
+        }
+  
+        .cluster {
+          max-width: 480px;
+          height: 436px;
+        }
+  
+        .dotsBlue {
+          max-width: 274px;
+          left: 0;
+          top: 45px;
+        }
+  
+        .owlHorned,
+        .owlBurrowing {
+          max-width: 248px;
+        }
+  
+        .circle {
+          max-width: 196px;
+          height: 196px;
+          left: 115px;
+          top: 240px;
+        }
+  
+        .caption {
+          bottom: 25px;
+          right: 0;
+        }
+  
+        .clusterBurrowing {
+          max-width: 480px;
+          height: 542px;
+        }
+  
+        .dotsWhite {
+          max-width: 174px;
+          left: 0;
+          top: 220px;
+        }
+  
+        .owlBurrowing {
+          max-width: 369px;
+          top: 88px;
+        }
+  
+        .triangle {
+          max-width: 240px;
+          height: 240px;
+          left: -10px;
+        }
+  
+        .captionBurrowing {
+          top: 482px;
+        }
+      }
+  
+      @media screen and (max-width: 540px) {
+        .title {
+          font-size: 34px;
+          line-height: 51px;
+          padding-left: 0px;
+        }
+  
+        .clusterPieces {
+          position: relative;
+        }
+  
+        .cluster {
+          max-width: 320px;
+          height: 530px;
+        }
+  
+        .dotsBlue {
+          display: none
+        }
+  
+        .owlHorned {
+          max-width: 320px;
+          top: 0;
+        }
+  
+        .circle {
+          display: none;
+        }
+  
+        .caption {
+          float: right;
+          bottom: 0;
+        }
+  
+        .clusterBurrowing {
+          max-width: 320px;
+          height: 268px;
+        }
+  
+        .dotsWhite {
+          display: none
+        }
+  
+        .owlBurrowing {
+          max-width: 320px;
+          top: 0;
+        }
+  
+        .triangle {
+          display: none
+        }
+  
+        .captionBurrowing {
+          float: right;
+          top: 0;
+        }
+      }
+
+
+      #follower {
+
+
+position: absolute;
+
+pointer-events: none; /* Prevents interaction with other elements */
+transform: translate(-50%, -50%); /* Centers the element relative to cursor */
+z-index: 1000;
+display: none; /* Initially hidden */
+}
+
+    </style>
 
  
     
@@ -181,18 +460,65 @@
 
 <div class="tabs">
   <div class="tab-2">
-    <label for="tab2-1">One</label>
+    <label for="tab2-1">Therapredict</label>
     <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
     <div>
       <h4>Tab One</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat id velit quis vestibulum. Nam id orci eu urna mollis porttitor. Nunc nisi ante, gravida at velit eu, aliquet sodales dui. Sed laoreet condimentum nisi a egestas. <a class="documentation" href="https://flkt.mx/pitaya/componentes.html#pestanias">Documentación en español</a>.</p><p>Donec interdum ante ut enim consequat, quis varius nulla dapibus. Vivamus mollis fermentum augue a varius. Vestibulum in sapien at lectus gravida lobortis vulputate sed metus. Duis scelerisque justo et maximus efficitur. Donec eu eleifend quam. Curabitur aliquet commodo sapien eget vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum vel aliquet nunc, finibus posuere lorem. Suspendisse consectetur volutpat est ut ornare.</p>
-    </div>
+
+
+      <div class="card-container" style="position: relative">
+        <!-- Multiple cards for scrolling -->
+        <div class="card">
+
+
+
+          <svg   class = " cardsvg1" width="105" height="103" viewBox="0 0 105 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse opacity="0.8" cx="52.5637" cy="51.6393" rx="52.2563" ry="50.8811" transform="rotate(-16.5141 52.5637 51.6393)" fill="white"/>
+            </svg>
+            
+
+                   <svg class = "cardsvg2"  width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.8" d="M35.2943 14.4506C37.7883 22.8628 32.8204 31.8725 24.0229 34.4808C15.2255 37.0891 6.14959 32.2431 3.65553 23.8309C1.16147 15.4187 6.12942 6.40906 14.9269 3.80078C23.7243 1.1925 32.8002 6.03844 35.2943 14.4506Z" fill="url(#paint0_linear_718_282)" stroke="white" stroke-width="5"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_718_282" x1="14.2162" y1="1.40391" x2="24.7336" y2="36.8776" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#667C99"/>
+                    <stop offset="1" stop-color="#AACEFF"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+                    
+
+
+          <div class = "text01">
+          <h1 class="card-heading ">TheraPredict</h1>
+          <p class="card-subtitle ">Personalized antidepressant therapy prediction system by DigiBiomics. Enhances
+            treatment outcomes through advanced algorithms.</p>
+
+          </div>
+
+
+         
+              <div class="desktop">
+            <div class=" cardbutton button " style="margin-top: 40px; align-self: start; width: 30%; margin-left: 0;">
+              <div class="button-text" style="width: 50%">Get Started</div>
+            </div>
+            </div>
+          <img  src="https://digi.xigabyte.pp.ua/images/2.png" alt="Card Image" class="card-image ">
+          
+        </div>
+
+       
+
+      </div>
+      <div class="title titleBurrowing"><span>Personalized antidepressant therapy prediction system</span> by DigiBiomics. Enhances
+        treatment outcomes through advanced algorithms</div>
+      </div>
   </div>
 
 
 
   <div class="tab-2">
-    <label for="tab2-2">Two</label>
+    <label for="tab2-2">Therapredict</label>
     <input id="tab2-2" name="tabs-two" type="radio">
     <div>
       <h4>Tab Two</h4>
@@ -202,7 +528,7 @@
 
 
   <div class="tab-2">
-    <label for="tab2-3">Three</label>
+    <label for="tab2-3">Therapredict</label>
     <input id="tab2-3" name="tabs-two" type="radio">
     <div>
       <h4>Tab Three</h4>
@@ -231,7 +557,7 @@
 
 
 <!--footer1 sec start-->
-<div class="footer"  style= "">
+<div class="footer"  >
 
 
     <div class="container">
@@ -298,6 +624,67 @@
   </div>
   <!--foo0ter1 sec end-->
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+
+
+      // Register ScrollTrigger plugin
+      gsap.registerPlugin(ScrollTrigger);
+
+/* --- Split the text, Burrowing Owl --- */
+function setupSplits() {
+  
+  var tlSplitBurrowing = gsap.timeline(), 
+      SplitBurrowing = new SplitText(".titleBurrowing", {type:"words,chars"}), 
+      chars = SplitBurrowing.chars; //an array of all the divs that wrap each character
+  
+  
+  tlSplitBurrowing.from(chars, {
+    duration: 0.8,
+    opacity:0,
+    y:10,
+    ease:"circ.out",
+    stagger: 0.02,
+  scrollTrigger: {
+      trigger: ".titleBurrowing",
+  //markers:true,
+      start: "top 75%",
+     end: "bottom center",
+      scrub:1
+    }
+  //,   onComplete: () => {SplitBurrowing.revert()}
+  //}, "+=0");
+  
+  // window.addEventListener('resize', function() {
+    // SplitBurrowing.revert();
+   });
+    
+  };
+
+
+
+  </script>
   </body>
 
   </html>

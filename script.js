@@ -535,9 +535,6 @@ ScrollTrigger.create({
 
 
 
-
-
-
 document.querySelectorAll('.question-container').forEach(function(question) {
   question.addEventListener('click', function() {
     // Check if the clicked question is already active

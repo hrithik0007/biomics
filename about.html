@@ -1,118 +1,415 @@
-   
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Your Page Title</title>
-      <link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="en">
 
-   
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-      <link rel="stylesheet" href="vendor/css/bundle.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="vendor/css/LineIcons.min.css">
-      <!-- Plugin Css -->
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Your Page Title</title>
+  <link rel="stylesheet" href="styles.css">
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+  <link rel="stylesheet" href="vendor/css/bundle.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="vendor/css/LineIcons.min.css">
+  <!-- Plugin Css -->
 
 
-     
-       <!-- Link to an external stylesheet -->
-  </head>
-  <body>
-
-    <script type="module" src="script.js"></script> 
   
-    
-    <a
-     
-    <svg
-      class="w-9"
-      viewBox="0 0 969 955"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        cx="161.191"
-        cy="320.191"
-        r="133.191"
-        stroke="currentColor"
-        stroke-width="20"
-      ></circle>
-      <circle
-        cx="806.809"
-        cy="320.191"
-        r="133.191"
-        stroke="currentColor"
-        stroke-width="20"
-      ></circle>
-      <circle
-        cx="695.019"
-        cy="587.733"
-        r="31.4016"
-        fill="currentColor"
-      ></circle>
-      <circle
-        cx="272.981"
-        cy="587.733"
-        r="31.4016"
-        fill="currentColor"
-      ></circle>
-      <path
-        d="M564.388 712.083C564.388 743.994 526.035 779.911 483.372 779.911C440.709 779.911 402.356 743.994 402.356 712.083C402.356 680.173 440.709 664.353 483.372 664.353C526.035 664.353 564.388 680.173 564.388 712.083Z"
-        fill="currentColor"
-      ></path>
-      <rect
-        x="210.42"
-        y="448.31"
-        width="343.468"
-        height="51.4986"
-        fill="#FF1E1E"
-      ></rect>
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M745.643 288.24C815.368 344.185 854.539 432.623 854.539 511.741H614.938V454.652C614.938 433.113 597.477 415.652 575.938 415.652H388.37C366.831 415.652 349.37 433.113 349.37 454.652V511.741L110.949 511.741C110.949 432.623 150.12 344.185 219.845 288.24C289.57 232.295 384.138 200.865 482.744 200.865C581.35 200.865 675.918 232.295 745.643 288.24Z"
-        fill="currentColor"
-      ></path>
-    </svg>
-  </a>
+  
+  <script src="https://404043.hstgr.cloud/basedev/librarys/gsap/SplitText.min.js"></script>
+  <script src="https://404043.hstgr.cloud/basedev/librarys/gsap/TextPlugin.min.js"></script>
 
- 
-    
 
-    <div >
-  <header>
-      <div class="headerr">
-           <!-- <a href="./index.html" class="header__logo">Logo</a>  -->
-          <div class="hlogo"></div>
+
+  <!-- Link to an external stylesheet -->
+</head>
+
+<body>
+
+  <script type="module" src="script.js"></script>
+  <style>
 
 
 
 
+.about-wrapper {
 
+  width: 100vw;
+	 
+	 
+	 
+	 color: #124;
+	 background-image: radial-gradient(rgba(255, 0, 0, 0.156), rgba(255, 0, 0, 0) 40vw), radial-gradient(rgba(0, 128, 0, 0.173), rgba(0, 128, 0, 0) 40vw), radial-gradient(rgba(255, 0, 0, 0.167), rgba(255, 0, 0, 0) 40vw);
+	 background-position: -40vw 14rem, 50% 10rem, 60vw 14rem, -10vw calc(14rem + 20vw), 30vw calc(14rem + 20vw);
+	 background-size: 80vw 80vw;
+	 background-repeat: no-repeat;
 
+}
+    .title {
+      color: var(--primary);
+      font-size: 40px;
+      line-height: 68px;
+      font-family: 'Libre Baskerville', serif;
+      padding-top: 60px;
+      padding-bottom: 40px;
+      width: 90%;
+      background-color: transparent;
+      margin: 40px auto;
+      overflow: hidden;
+      box-sizing: border-box;
+      font-kerning: none;
+    }
 
+    .title span {
+      color: var(--secondary);
+      overflow: hidden;
+    }
 
-    <div class="menu">
-    <h4>Menu</h4>
-    </div>
+    img {
+      width: 100%;
+    }
 
-
-
+    section {
+      width: 100vw;
       
-          <ul class="header__nav">
-            <div class="header_div">
+      margin: 0 auto;
+    }
+
+    .cluster {
+      position: relative;
+      width: 100%;
+      max-width: 874px;
+      height: 792px;
+      margin: 100px auto;
+      background-color: transparent;
+      padding-bottom: 100px;
+    }
+
+    .clusterPieces {
+      position: absolute;
+    }
+
+    .circle {
+      width: 100%;
+      max-width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      left: 30vh;
+      bottom: 20vh;
+      z-index: 1;
+    }
+
+    .dotsBlue {
+      width: 100%;
+      height: auto;
+      max-width: 494px;
+      max-height: 434px;
+      z-index: 3;
+      left: 0;
+      top: 10vh;
+    }
+
+    .owlHorned {
+      width: 100%;
+      height: auto;
+      max-width: 450px;
+      max-height: 700px;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+
+    .caption {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      line-height: 16px;
+      color: var(--primary);
+      text-align: right;
+    }
+
+    .caption span {
+      color: #ffffff;
+    }
+
+    #wrappie {
+      width: 960px;
+      height: 792px;
+      margin: 0 auto;
+    }
+
+
+    .dotsWhite {
+      width: 100%;
+      height: auto;
+      max-width: 310px;
+      max-height: 588px;
+      z-index: 2;
+      left: 0;
+      top: 400px;
+    }
+
+    .owlBurrowing {
+      width: 100%;
+      height: auto;
+      max-width: 674px;
+      max-height: 700px;
+      top: 162px;
+      right: 0;
+      z-index: 1;
+    }
+
+    .triangle {
+      width: 100%;
+      max-width: 448px;
+      height: 446px;
+      left: -28px;
+      top: 0;
+      z-index: 3;
+    }
+
+    .clusterBurrowing {
+      max-width: 874px;
+      height: 996px;
+    }
+
+    .captionBurrowing {}
+
+    .spcr300 {
+      padding-bottom: 300px;
+    }
+
+
+    @media screen and (max-width: 1025px) {
+      .title {
+        font-size: 60px;
+        line-height: 74px;
+        padding-left: 40px;
+      }
+
+      .cluster {
+        max-width: 600px;
+        height: 550px;
+        margin: 20px auto;
+      }
+
+      .dotsBlue {
+        max-width: 340px;
+        left: 0;
+        top: 56px;
+      }
+
+      .owlHorned {
+        max-width: 450px;
+      }
+
+      .circle {
+        max-width: 246px;
+        height: 246px;
+        left: 146px;
+        top: 300px;
+      }
+
+      .caption {
+        bottom: 38px;
+        right: 0;
+      }
+
+      .clusterBurrowing {
+        max-width: 600px;
+        height: 678px;
+      }
+
+      .dotsWhite {
+        max-width: 216px;
+        left: 0;
+        top: 275px;
+      }
+
+      .owlBurrowing {
+        max-width: 460px;
+        top: 112px;
+      }
+
+      .triangle {
+        max-width: 307px;
+        height: 304px;
+        left: -14px;
+      }
+
+      .captionBurrowing {
+        top: 605px;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .title {
+        font-size: 44px;
+        line-height: 61px;
+      }
+
+      .cluster {
+        max-width: 480px;
+        height: 436px;
+      }
+
+      .dotsBlue {
+        max-width: 274px;
+        left: 0;
+        top: 45px;
+      }
+
+      .owlHorned,
+      .owlBurrowing {
+        max-width: 248px;
+      }
+
+      .circle {
+        max-width: 196px;
+        height: 196px;
+        left: 115px;
+        top: 240px;
+      }
+
+      .caption {
+        bottom: 25px;
+        right: 0;
+      }
+
+      .clusterBurrowing {
+        max-width: 480px;
+        height: 542px;
+      }
+
+      .dotsWhite {
+        max-width: 174px;
+        left: 0;
+        top: 220px;
+      }
+
+      .owlBurrowing {
+        max-width: 369px;
+        top: 88px;
+      }
+
+      .triangle {
+        max-width: 240px;
+        height: 240px;
+        left: -10px;
+      }
+
+      .captionBurrowing {
+        top: 482px;
+      }
+    }
+
+    @media screen and (max-width: 540px) {
+      .title {
+        font-size: 34px;
+        line-height: 51px;
+        padding-left: 0px;
+      }
+
+      .clusterPieces {
+        position: relative;
+      }
+
+      .cluster {
+        max-width: 320px;
+        height: 530px;
+      }
+
+      .dotsBlue {
+        display: none
+      }
+
+      .owlHorned {
+        max-width: 320px;
+        top: 0;
+      }
+
+      .circle {
+        display: none;
+      }
+
+      .caption {
+        float: right;
+        bottom: 0;
+      }
+
+      .clusterBurrowing {
+        max-width: 320px;
+        height: 268px;
+      }
+
+      .dotsWhite {
+        display: none
+      }
+
+      .owlBurrowing {
+        max-width: 320px;
+        top: 0;
+      }
+
+      .triangle {
+        display: none
+      }
+
+      .captionBurrowing {
+        float: right;
+        top: 0;
+      }
+    }
+
+
+    .aacards {
+     padding-top: 100px;
+      
+      justify-content: center;
+    }
+  </style>
+
+
+
+
+<div class="about-wrapper">
+  
+
+
+
+
+  <div>
+    <header>
+      <div class="headerr">
+        <!-- <a href="./index.html" class="header__logo">Logo</a>  -->
+        <div class="hlogo"></div>
+
+
+
+
+
+
+
+
+        <div class="menu">
+          <h4>Menu</h4>
+        </div>
+
+
+
+
+        <ul class="header__nav">
+          <div class="header_div">
             <li class="header__list">
               <a class="header__link" href="index.html">HomePage</a>
             </li>
@@ -121,152 +418,421 @@
             <li class="header__list">
               <a class="header__link" href="about.html">About</a>
             </li>
-          </div>  <div class="header_div">
+          </div>
+          <div class="header_div">
             <li class="header__list">
               <a class="header__link" href="#">Services</a>
             </li>
 
-           </div> <div class="header_div">
+          </div>
+          <div class="header_div">
             <li class="header__list">
               <a class="header__link" href="products.html">Products</a>
             </li>
-           </div> <div class="header_div">
+          </div>
+          <div class="header_div">
             <li class="header__list">
               <a class="header__link" href="#">Contact</a>
             </li>
-            </div>
-         
-          </ul>
-          <div class="hbutton">
-            <div class="button-text">Get Started</div>
           </div>
+
+        </ul>
+        <div class="hbutton">
+          <div class="button-text">Get Started</div>
         </div>
+      </div>
+
+
+    </header>
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+  <section>
+    <div class="title titleGreathorned"><span>DigiBiomics® Harness The Power Of AI And ML </span>
+        To Tackle Three Crucial Domains That Are Of Utmost Importance To Humanity Today: Health,
+        Agriculture, And Climate Change
+    </div>
+    </section>
+    <section class="aacards" style="height:100vh">
+    <div class ="agrid"
+    <div class="acard-container" >
+      <!-- Multiple cards for scrolling -->
+      <div class="acard first-card">
+  
+  
+  
+        <svg   class = " acardsvg1" width="105" height="103" viewBox="0 0 105 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse opacity="0.8" cx="52.5637" cy="51.6393" rx="52.2563" ry="50.8811" transform="rotate(-16.5141 52.5637 51.6393)" fill="white"/>
+          </svg>
+          
+  
+                 
+                  
+  
+  
+        <div class = "text01">
+        <h1 class="card-heading ">TheraPredict</h1>
+        <p class="card-subtitle ">Personalized antidepressant therapy prediction system by DigiBiomics. Enhances
+          treatment outcomes through advanced algorithms.</p>
+  
+        </div>
+  
+  
+       
+            
+       </div>
+        
+        
+      
+    <div class="acard second-card " style="top:-80%">
+      
+      <div class="text01">
+        <h1 class="card-heading">TheraPredict 2</h1>
+        <p class="card-subtitle">Another description for the second card with advanced features.</p>
+      </div>
+    </div>
+     </div>
+  
     
   
-  </header>
- 
- 
-  
-  
-  
-  
+  </section>
 
 
+
+ 
+
+
+  <section class="cluster clusterGreat">
+
+
+
+   
+    
+
+     
+    <div class="circle clusterPieces"></div>
+
+    <div class="owlHorned clusterPieces">
+      
+      <div class="wcard-container">
+      <!-- Multiple cards for scrolling -->
+
+
+
+
+
+
+
+      <div class="wcard-flip">
+        <div class="flip">
+            <div class="front">
+
+
+
+
+      <div class="wcard">
+        <h1 class="wcard-heading ">We are DigiBioMics</h1>
+        <p class="wcard-subtitle ">Personalized antidepressant therapy prediction system by DigiBiomics. Enhances
+          treatment outcomes through advanced algorithms.</p>
+          <div class="wbutton" style="margin-top: 40px; align-self: center;">
+            <div class="wbutton-text" style="width: 200px">Get Started</div>
+          </div>
+        
+        
+      </div>
+      </div>
+
+
+      <div class="back">
+
+        <div class="wcard">
+          <h1 class="wcard-heading ">We are DigiBioMics</h1>
+          <p class="wcard-subtitle ">Personalized antideps.</p>
+            <div class="wbutton" style="margin-top: 40px; align-self: center;">
+              <div class="wbutton-text" style="width: 200px">Get Started</div>
+            </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Add more cards as needed -->
+
+
+
+      
     </div>
 
 
-    
 
+    </div>
+    </div>
+    
+    </div>
+      <div class="caption"><span>/01</span> our Vision</div>
+    </div>
+
+    <img class="dotsBlue clusterPieces"
+      src="https://www.micelistudios.com/sandbox/scrolltrigger/imgs/dots_blue_494x434.svg" />
+  </section>
+
+  <section>
+    <div class="title titleBurrowing"><span>Personalized antidepressant therapy prediction system</span> by DigiBiomics. Enhances
+      treatment outcomes through advanced algorithms</div>
+  </section>
+
+
+  <section class="cluster clusterBurrowing">
+    <img class="clusterPieces triangle"
+      src="https://www.micelistudios.com/sandbox/scrolltrigger/imgs/triangle_448x446.svg">
+
+    <div class="clusterPieces owlBurrowing">
+      <div class="wcard-container">
+        <!-- Multiple cards for scrolling -->
+  
+  
+  
+  
+  
+  
+  
+        <div class="wcard-flip">
+          <div class="flip">
+              <div class="front">
+  
+  
+  
+  
+        <div class="wcard">
+          <h1 class="wcard-heading ">We are DigiBioMics</h1>
+          <p class="wcard-subtitle ">Personalized antidepressant therapy prediction system by DigiBiomics. Enhances
+            treatment outcomes through advanced algorithms.</p>
+            <div class="wbutton" style="margin-top: 40px; align-self: center;">
+              <div class="wbutton-text" style="width: 200px">Get Started</div>
+            </div>
+          
+          
+        </div>
+        </div>
+  
+  
+        <div class="back">
+  
+          <div class="wcard">
+            <h1 class="wcard-heading ">We are DigiBioMics</h1>
+            <p class="wcard-subtitle ">Personalized antideps.</p>
+              <div class="wbutton" style="margin-top: 40px; align-self: center;">
+                <div class="wbutton-text" style="width: 200px">Get Started</div>
+              </div>
+  
+        </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+        <!-- Add more cards as needed -->
+  
+  
+  
+        
+      </div>
+  
+  
+  
+      </div>
+      </div>
+      
+      </div>
+      <div class="caption captionBurrowing"><span>/02</span> Our Mission</div>
+    </div>
+
+    <img class="clusterPieces dotsWhite"
+      src="https://www.micelistudios.com/sandbox/scrolltrigger/imgs/dots_white_310x588.svg">
+
+  </section>
+
+  <section class="spcr300"></section>
+
+
+
+  
   <section class="aboutus">
+
+
+
+
+
+
     <div class="aboutusflex">
-    <div class="counter-container">
+      <div class="counter-container">
         <i class="fab fa-instagram fa-3x"></i>
-      <div class="cccc"> <div class="counter" data-target="40"></div> <div class="ccc">K+</div></div>
+        <div class="cccc">
+          <div class="counter" data-target="40"></div>
+          <div class="ccc">K+</div>
+        </div>
         <span>Life saves per year</span>
       </div>
       <div class="counter-container">
         <i class="fab fa-youtube fa-3x"></i>
-        <div class="cccc"><div class="ccc">$</div> <div class="counter" data-target="19"></div> <div class="ccc">b+</div></div>
+        <div class="cccc">
+          <div class="ccc">$</div>
+          <div class="counter" data-target="19"></div>
+          <div class="ccc">b+</div>
+        </div>
         <span>Overall Savings</span>
       </div>
       <div class="counter-container">
         <i class="fab fa-facebook fa-3x"></i>
-        <div class="cccc"> <div class="counter" data-target="30"></div> <div class="ccc">m+</div></div>
+        <div class="cccc">
+          <div class="counter" data-target="30"></div>
+          <div class="ccc">m+</div>
+        </div>
         <span>hours freed up</span>
       </div>
 
       <div class="counter-container">
         <i class="fab fa-facebook fa-3x"></i>
-        <div class="cccc"> <div class="counter" data-target="20"></div> <div class="ccc">%</div></div>
+        <div class="cccc">
+          <div class="counter" data-target="20"></div>
+          <div class="ccc">%</div>
+        </div>
         <span>increased pateints intractive time</span>
       </div>
     </div>
   </section>
-  
-  
-  
 
-<!--footer1 sec start-->
-<div class="footer"  style= "">
+
+
+
+  <!--footer1 sec start-->
+  <div class="footer" style="">
 
 
     <div class="container">
-        <div class="row footer-container">
-            <div class="col-sm-12 col-lg-4 f-sec1  text-center text-lg-left">
-                <h4 class="high-lighted-heading">About Us</h4>
-                <p>We take our mission of increasing our global access to quality medical models seriously. </p>
-                <a href="#">Read more</a>
-                <h4>Social Network</h4>
-                <div class="s-icons">
-                    <ul class="social-icons-simple">
-                        <li><a href="javascript:void(0)" class="facebook-bg-hvr"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:void(0)" class="twitter-bg-hvr"><i class="fab fa-twitter" aria-hidden="true"></i></a> </li>
-                        <li><a href="javascript:void(0)" class="instagram-bg-hvr"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-5 f-sec2 ">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <h4 class="text-center text-md-left">Information</h4>
-                        <ul class="text-center text-md-left">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Product</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Condition</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="shop/contact.html">Contact Us</a></li>
-                            <li><a href="#">Products</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <h4 class="text-center text-md-left">Experts</h4>
-                        <ul class="text-center text-md-left">
-                            <li><a href="#">Become a partner</a></li>
-                            <li><a href="#">work with us</a></li>
-                            
-                            <li><a href="#">Refund Policy</a></li>
-                            <li><a href="#">Responsive Website</a></li>
-                            <li><a href="#">Subscription</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-3 f-sec3  text-center text-lg-left">
-                <h4>Our Portfolio</h4>
-                <div class="foot-tag-list">
-                    <span>TheraPredict</span>
-                    <span>pulmoDeep</span>
-                    <span>Neuropredittor</span>
-                    <span>GIOAI</span>
-                    <span>EsoPred</span>
-                    <span>AlzhiNet</span>
-                    <span>H&NSCC-SCOPE</span>
-                </div>
-            </div>
+      <div class="row footer-container">
+        <div class="col-sm-12 col-lg-4 f-sec1  text-center text-lg-left">
+          <h4 class="high-lighted-heading">About Us</h4>
+          <p>We take our mission of increasing our global access to quality medical models seriously. </p>
+          <a href="#">Read more</a>
+          <h4>Social Network</h4>
+          <div class="s-icons">
+            <ul class="social-icons-simple">
+              <li><a href="javascript:void(0)" class="facebook-bg-hvr"><i class="fab fa-facebook-f"
+                    aria-hidden="true"></i></a></li>
+              <li><a href="javascript:void(0)" class="twitter-bg-hvr"><i class="fab fa-twitter"
+                    aria-hidden="true"></i></a> </li>
+              <li><a href="javascript:void(0)" class="instagram-bg-hvr"><i class="fab fa-instagram"
+                    aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-12 footer_notes">
-                <p class="whitecolor text-center w-100 wow fadeInDown">&copy; 2024 DigiBiomics. All rights reserved <a class="web-link" href="http://www.digibiomics.com/" target="_blank">Digibiomics</a></p>
+        <div class="col-sm-12 col-lg-5 f-sec2 ">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h4 class="text-center text-md-left">Information</h4>
+              <ul class="text-center text-md-left">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Condition</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="shop/contact.html">Contact Us</a></li>
+                <li><a href="#">Products</a></li>
+              </ul>
             </div>
+            <div class="col-12 col-md-6">
+              <h4 class="text-center text-md-left">Experts</h4>
+              <ul class="text-center text-md-left">
+                <li><a href="#">Become a partner</a></li>
+                <li><a href="#">work with us</a></li>
+
+                <li><a href="#">Refund Policy</a></li>
+                <li><a href="#">Responsive Website</a></li>
+                <li><a href="#">Subscription</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <div class="col-sm-12 col-lg-3 f-sec3  text-center text-lg-left">
+          <h4>Our Portfolio</h4>
+          <div class="foot-tag-list">
+            <span>TheraPredict</span>
+            <span>pulmoDeep</span>
+            <span>Neuropredittor</span>
+            <span>GIOAI</span>
+            <span>EsoPred</span>
+            <span>AlzhiNet</span>
+            <span>H&NSCC-SCOPE</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 footer_notes">
+          <p class="whitecolor text-center w-100 wow fadeInDown">&copy; 2024 DigiBiomics. All rights reserved <a
+              class="web-link" href="http://www.digibiomics.com/" target="_blank">Digibiomics</a></p>
+        </div>
+      </div>
     </div>
   </div>
   <!--foo0ter1 sec end-->
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       // Register ScrollTrigger plugin
       gsap.registerPlugin(ScrollTrigger);
-  
+
       const counters = document.querySelectorAll(".counter");
-  
+
       counters.forEach((counter) => {
         const target = +counter.getAttribute("data-target");
-  
+
         // Initialize the counter to 0
         counter.innerText = "0";
-  
+
         // GSAP ScrollTrigger animation
         gsap.to(counter, {
           innerText: target,   // Animate to the target number
@@ -277,7 +843,7 @@
             trigger: counter,    // Element that triggers the animation
             start: "top 40%",    // Start animation when top of the trigger is 80% from the top of viewport
             end: "top 30%",      // End animation when top of the trigger is 30% from the top of viewport
-            scrub: true,         // Smooth scrubbing, takes true or a number to control speed
+            scrub: false,         // Smooth scrubbing, takes true or a number to control speed
           },
           onUpdate: function () {
             // Update the counter text with formatted number
@@ -287,9 +853,283 @@
       });
     });
   </script>
+
+<script>
+
+gsap.set(".circle", { yPercent: -5});
+gsap.set(".dotsBlue", { yPercent: 10});
+gsap.set(".owlHorned", { yPercent: -20});
+gsap.set(".clusterGreat", { yPercent: 5});
+
+gsap.to(".circle", {
+  yPercent: 5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".clusterGreat",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".dotsBlue", {
+  yPercent: -10,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".clusterGreat",
+    scrub: 1
+  }, 
+});
+
+
+gsap.to(".owlHorned", {
+  yPercent: 20,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".clusterGreat",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".caption", {
+  yPercent: 100,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".clusterGreat",
+  // markers:true,
+    end: "bottom center",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".clusterGreat", {
+  yPercent: -5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".clusterGreat",
+    end: "bottom center",
+    scrub: 1
+  }, 
+});
+
+
+
+/* ------Burrowing Owl Sequence------  */
+gsap.set(".triangle", { yPercent: 25, rotation:-90});
+gsap.set(".dotsWhite", { yPercent: 10});
+gsap.set(".owlBurrowing", { yPercent: -20});
+gsap.set(".clusterBurrowing", { yPercent: 5});
+
+gsap.to(".triangle", {
+  yPercent: -5,
+  rotation: 40,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".clusterBurrowing",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".dotsWhite", {
+  yPercent: -10,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".clusterBurrowing",
+    scrub: 1
+  }, 
+});
+
+
+gsap.to(".owlBurrowing", {
+  yPercent: 20,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".clusterBurrowing",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".captionBurrowing", {
+  yPercent: 200,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".clusterBurrowing",
+  // markers:true,
+    end: "bottom center",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".clusterBurrowing", {
+  yPercent: -5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".clusterBurrowing",
+  // markers:true,
+    end: "bottom center",
+    scrub: 1
+  }, 
+});
+
+
+/*
+gsap.set("#wrappie", {transformOrigin:"top left"});
+
+function sizeAll() {
+	var w = document.body.clientWidth;
+  	console.log(w);
+	if ( w < 960) {
+     gsap.set("#wrappie",  {scale:w/100*.125}); 
+		} 
+}
+
+window.onresize = sizeAll;
+
+sizeAll();
+*/
+
+/*
+const quotes = document.querySelectorAll(".title");
+
+function setupSplits() {
+  quotes.forEach(quote => {
+    // Reset if needed
+    if(quote.anim) {
+      quote.anim.progress(1).kill();
+      quote.childSplit.revert();
+      quote.parentSplit.revert();
+    }
+    
+    // Set up the splits
+    quote.parentSplit = new SplitText(quote, {
+      type: "lines",
+      linesClass: "split-parent"
+    });
+
+    quote.childSplit = new SplitText(quote, { type: "lines" });
+
+    // Set up the anim
+    quote.anim = gsap.from(quote.childSplit.chars, {
+      scrollTrigger: {
+        trigger: quote,
+        toggleActions: "restart pause resume reverse",
+        start: "top 50%",
+      },
+      duration: 0.6, 
+      ease: "circ.out", 
+      y: 10,
+      opacity:0,
+      stagger: 0.02,
+    });
+  });
+}
+
+ScrollTrigger.addEventListener("refresh", setupSplits);
+setupSplits();
+*/
+
+
+/* --- Split the text, Great Horned Owl --- */
+var tlSplitGreat = gsap.timeline({onComplete: () => {SplitGreat.revert()}}), 
+    SplitGreat = new SplitText(".titleGreathorned", {type:"words,chars"}), 
+    chars = SplitGreat.chars;
+
+
+tlSplitGreat.from(chars, {
+  duration: 0.8,
+  opacity:0,
+  y:10,
+  ease:"circ.out",
+  stagger: 0.02,
+}, "+=0");
+
+
+
+
+
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".aacards",
+    start: "top 30%", // Adjust start position
+    end: "center 70%",
+     // Adjust the distance of scroll needed
+    scrub: true,
+    
+   // markers: true // Remove this in production
+  }
+})
+  .to(".second-card", {
+    left: "0%",
+    top:"0%", // Move it to its original position in the row
+    opacity: 1, // Make it visible
+    zIndex: 0, // Bring it forward
+    duration: 1,
+    ease: "power2.inOut"
+  })
+  .to(".first-card", {
+    
+    rotate: "15deg",
+    
+    duration: 1,
+    ease: "power2.inOut"
+  });
+
+
+
+
+/* --- Split the text, Burrowing Owl --- */
+function setupSplits() {
   
+var tlSplitBurrowing = gsap.timeline(), 
+    SplitBurrowing = new SplitText(".titleBurrowing", {type:"words,chars"}), 
+    chars = SplitBurrowing.chars; //an array of all the divs that wrap each character
+
+
+tlSplitBurrowing.from(chars, {
+  duration: 0.8,
+  opacity:0,
+  y:10,
+  ease:"circ.out",
+  stagger: 0.02,
+scrollTrigger: {
+    trigger: ".titleBurrowing",
+//markers:true,
+    start: "top 75%",
+   end: "bottom center",
+    scrub:1
+  }
+//,   onComplete: () => {SplitBurrowing.revert()}
+}, "+=0");
+
+// window.addEventListener('resize', function() {
+  // SplitBurrowing.revert();
+// });
+  
+};
+
+/*
+ScrollTrigger.addEventListener("scrollEnd", function() {
+    SplitBurrowing.revert();
+});
+*/
+
+ScrollTrigger.addEventListener("refresh", setupSplits);
+//ScrollTrigger.addEventListener("scrollEnd", () => SplitBurrowing.revert());
+setupSplits();
+
+
+/*
+// Alternate way of resizing the cluster elements since they are absolutely positioned
+$(window).resize(function (){
+if(window.matchMedia("(max-width: 500px)").matches){
+    gsap.set(".clusterGreat", {scale: 0.2, transformOrigin: "center center"});
+} else {
+  gsap.set(".clusterGreat", {scale: 1, transformOrigin: "center center"});
+          }
+});
+*/
+
 
   </script>
-  </body>
+</body>
 
-  </html>
+</html>
