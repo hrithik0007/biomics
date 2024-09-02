@@ -2291,7 +2291,7 @@ div.tp-dfwv {
 
 .second-card {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.704);
+  background-color: rgba(255, 255, 255, 0.353);
   left: -80%; /* Move it behind the first card */
   z-index: 0; /* Keep it behind the first card */
   opacity: 0; /* Initially invisible */
