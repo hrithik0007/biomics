@@ -5588,9 +5588,20 @@ ul {
 
 
 
+@media (max-width: 768px) {
 
 
 
+
+
+.tabs [class^="tab"] label,
+.tabs [class*=" tab"] label {
+  
+  font-size: 0.9em;
+  
+}
+
+}
 
 
 
