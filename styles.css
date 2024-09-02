@@ -421,6 +421,7 @@ z-index: 2;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  
 }
 
 .header__list {
@@ -487,7 +488,7 @@ z-index: 2;
     align-items: start;
      
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    z-index:12;
+    z-index:120;
     /* Make sure it appears above other content */
 
   }
