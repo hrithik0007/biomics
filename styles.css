@@ -466,6 +466,7 @@ z-index: 2;
 .responsive-bar {
 
   display: none;
+  z-index:12000000000;
 
 
 }
@@ -488,7 +489,7 @@ z-index: 2;
     align-items: start;
      
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    z-index:120;
+    z-index:12000000000000;
     /* Make sure it appears above other content */
 
   }
@@ -5425,13 +5426,13 @@ ul {
 
 
   .xcontainer {
-    width: 180px;
+    width: 40vw;
     height: 300px;
     padding: 1rem;
     
   }
   .wrap {
-    margin: 1rem;
+    margin: 0.8rem;
   }
   .xcard-img {
     width: 100px;
@@ -5760,13 +5761,16 @@ ul {
 
   padding: 10vw;
   background-color: #7768B1;
+  
+ 
 }
 
 
 .aboutus {
   position: relative;
   background-color: #7768B1;
-  height: 100vh;
+  max-height: 30vh;
+  padding: 20px;
   align-items: center;
   width: 100%;
   display: flex;
@@ -5783,12 +5787,6 @@ ul {
 
 @media (max-width: 768px) {
 
-  .aboutusflex {
-
-    flex-direction: column;
-
-
-  }
 
 
   .productpage {
@@ -5813,12 +5811,23 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   margin: 30px 50px;
+  border: 0.1rem solid rgba(255, 255, 255, 0.20);
+  background-color: rgba(255, 255, 255, 0.010);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.counter-container:hover {
+  background-color:rgba(255, 255, 255, 0.51) ;
+
 }
 
 .counter {
-  font-size: 60px;
+  font-size: 6vw;
   margin-top: 10px;
   color: white;
 
@@ -5826,8 +5835,9 @@ ul {
 
 .ccc {
 
-  font-size: 50px;
+  font-size: 6vw;
   margin-top: 10px;
+  color: white;
 }
 
 .cccc {
@@ -5836,10 +5846,43 @@ ul {
   flex-direction: row;
 }
 
+.pdis{
+  color: #ffffff;
+  font-size: 2vw;
+  font-family: 'Inter', sans-serif;
+  
+    }
+
 @media (max-width: 580px) {
   body {
     flex-direction: column;
   }
+  .ccc {
+
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .counter-container {
+    
+    margin: 10px 10px;
+    max-width: 15vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+
+
+
+  .pdis{
+    color: #ffffff;
+    font-size: 3vw;
+    
+      }
+
+
 }
 
 
