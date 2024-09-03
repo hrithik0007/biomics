@@ -165,12 +165,12 @@ const tl6 = gsap.timeline({
 
 
 
-const oldSplit = new SplitText(".old-text1", { type: "words" });
-const newSplit = new SplitText(".new-text1", { type: "words" });
+const oldSplit = new SplitText(".old-text1", { type: "chars" });
+const newSplit = new SplitText(".new-text1", { type: "chars" });
 
 // Animate old text out and hide it
-tl6.to(oldSplit.words, {
-  duration: 0.5,
+tl6.to(oldSplit.chars, {
+  duration: 0.2,
   opacity: 0,
   x: -20,
   stagger: 0.09,
@@ -186,17 +186,17 @@ tl6.to(oldSplit.words, {
 });
 
 // Animate new text in
-// tl6.from(newSplit.words, {
-//   duration: 0.5,
-//   opacity: 0,
-//   y: 20,
-//   stagger: 0.09,
-//   ease: "power1.out",
-// }, "+=0");
+tl6.from(newSplit.words, {
+  duration: 0.5,
+  opacity: 1,
+  y: 20,
+  stagger: 0.09,
+  ease: "power1.out",
+}, "+=0");
 
 // Animate new text out when scrolling back up
-tl6.to(newSplit.words, {
-  duration: 0.5,
+tl6.to(newSplit.chars, {
+  duration: 0.2,
   
   
   
@@ -213,24 +213,15 @@ tl6.to(newSplit.words, {
 });
 
 // Animate old text back in when scrolling back up
-// tl6.from(oldSplit.words, {
-//   duration: 0.5,
-//   opacity: 1,
-//   y: -20,
-//   stagger: 0.09,
-//   ease: "power1.out",
-// }, "+=0");
+tl6.from(oldSplit.words, {
+  duration: 0.5,
+  opacity: 1,
+  y: -20,
+  stagger: 0.09,
+  ease: "power1.out",
+}, "+=0");
 
   
-// tl6.to(".whatcard", {
-//   duration: 0.5,
-//   opacity: 0,
-//   y: -20,
- 
-//   ease: "power1.in",
- 
-// });
-
 
 
 
