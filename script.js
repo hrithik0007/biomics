@@ -151,7 +151,7 @@ const tl6 = gsap.timeline({
     trigger: ".what", // The section that triggers the animation
     scrub: true,
     start: "top top",
-    markers: true,
+    // markers: true,
     pin: true,
     pinSpacing: true,
     anticipatePin: 1,  // Animation ends before the `.products` section starts
