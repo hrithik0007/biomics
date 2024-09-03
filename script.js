@@ -146,35 +146,114 @@ gsap.defaults({ease: "none"});
 
 
 
-const tl = gsap.timeline({
+const tl6 = gsap.timeline({
   scrollTrigger: {
     trigger: ".what", // The section that triggers the animation
     scrub: true,
-    start: "top center",
-    end: "center center",  // Animation ends before the `.products` section starts
+    start: "top top",
+    markers: true,
+    pin: true,
+    pinSpacing: true,
+    anticipatePin: 1,  // Animation ends before the `.products` section starts
    
     //markers: true, 
   },
 });
 
 
-tl.fromTo(
-    " .whatcard", // Target another element
-    {
-      opacity: 0, // Start with hidden opacity
-      y: -200, // Start from the left
-    },
-    {
-      opacity: 1, // Fade in
-      y: 0, // Move to the final position
-      duration: 1.5, // Duration of the animation
-      ease: "power1.out", // Easing function
-    },
-    "<" // Sync with the start of the previous animation
-  )
 
+
+
+
+const oldSplit = new SplitText(".old-text1", { type: "words" });
+const newSplit = new SplitText(".new-text1", { type: "words" });
+
+// Animate old text out and hide it
+tl6.to(oldSplit.words, {
+  duration: 0.5,
+  opacity: 0,
+  x: -20,
+  stagger: 0.09,
+  ease: "power1.in",
+  onComplete: () => {
+    // Hide old text container and show new text container
+    document.querySelectorAll(".old-text1, .old-text2").forEach(el => {
+      el.style.display = "none";});
+      document.querySelectorAll(".new-text1, .new-text2").forEach(el => {
+        el.style.display = "block";});
+    
+  }
+});
+
+// Animate new text in
+// tl6.from(newSplit.words, {
+//   duration: 0.5,
+//   opacity: 0,
+//   y: 20,
+//   stagger: 0.09,
+//   ease: "power1.out",
+// }, "+=0");
+
+// Animate new text out when scrolling back up
+tl6.to(newSplit.words, {
+  duration: 0.5,
+  
+  
+  
+  stagger: 0.09,
+  ease: "power1.in",
+  onReverseComplete: () => {
+    // Hide new text container and show old text container
+    document.querySelectorAll(".old-text1, .old-text2").forEach(el => {
+      el.style.display = "block";});
+      document.querySelectorAll(".new-text1, .new-text2").forEach(el => {
+        el.style.display = "none";});
+    
+  }
+});
+
+// Animate old text back in when scrolling back up
+// tl6.from(oldSplit.words, {
+//   duration: 0.5,
+//   opacity: 1,
+//   y: -20,
+//   stagger: 0.09,
+//   ease: "power1.out",
+// }, "+=0");
 
   
+// tl6.to(".whatcard", {
+//   duration: 0.5,
+//   opacity: 0,
+//   y: -20,
+ 
+//   ease: "power1.in",
+ 
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -251,6 +330,8 @@ tl.fromTo(
 
     gsap.from(".doctor", {
       x: 800,
+      y: 300,
+      scale: 0.05,
       scrollTrigger: {
         trigger: ".contactus-card2",
         start: "top bottom",

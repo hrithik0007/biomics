@@ -1431,7 +1431,7 @@ section.what {
 
   font-size: 3vw;
   font-family: 'Abhaya Libre ExtraBold', sans-serif;
-
+  margin-top: 30vh;
 }
 
 
@@ -1440,6 +1440,7 @@ section.what {
   .what-card-title {
     font-size: 1.4rem;
     top: 0px;
+    margin-top: 0vh;
   }
 
   .image-div {
@@ -1477,7 +1478,7 @@ section.what {
 
 /* Base styles */
 .what-card {
-  min-width: 40vw;
+  width: 40vw;
   max-width: 70vw;
   /* Responsive width using vw */
   max-height: 40vh;
@@ -3818,12 +3819,12 @@ section.faq {
 /* Section-specific styling */
 .unique-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 20px;
   min-height: 70vh;
 
-  gap: 20px;
+ 
 
 }
 
@@ -4108,8 +4109,8 @@ section.faq {
 .answers {
 
   position: relative;
-  padding: 10px 10px;
-  color: #3B2A82;
+  padding: 20px 20px;
+  color: #3c2a829c;
 }
 
 
@@ -4139,7 +4140,10 @@ section.faq {
 }
 
 .right-innerr-container.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
 }
 
 /* Responsive Design Adjustments */
@@ -4615,6 +4619,7 @@ section.faq {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.162);
   /* Black shadow for the card */
   display: flex;
+  
   align-items: center;
   justify-content: center;
   border-radius: 3vw;
@@ -5196,7 +5201,7 @@ ul {
 /* Card Styling */
 .features-card {
   border: 0.1rem solid rgba(255, 255, 255, 0.2);
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.395);
   padding: 1.25rem;
   box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
@@ -5219,14 +5224,14 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  color: black;
+  color: rgb(108, 5, 145);
 }
 
 .features-title {
   font-size: 1.65rem;
   font-weight: bold;
   margin: 0;
-  color: rgb(52, 51, 51);
+  color: rgb(49, 45, 45);
 }
 
 .features-subtitle {
@@ -5242,6 +5247,7 @@ ul {
   width: 3rem;
   height: 3rem;
   object-fit: contain;
+  border-radius: 8vw;
 
 }
 
